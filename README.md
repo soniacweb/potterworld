@@ -4,9 +4,11 @@
 
 ## Project 02- PotterWorld
 
-### Pair programming exercise with fellow student developer, Cuong Tran.
+### Pair programming exercise with fellow student developer, Coung Tran.
 
 # Intro 
+
+PotterWorld is fantasy media app, delving into the fictional universe centered around the Harry Potter novel series by writer, J. K. Rowling. We used an unnofficial Harry Potter API and realised to late in the day, the images weren't unfortunately sufficiant for this app to take inspiration from to the Wizarding World app.
 
 
 # Getting Started
