@@ -1,6 +1,6 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) 
  
- <img src="https://i.imgur.com/WC0VKh3.png" style="width: 150px; display: block; margin: 0 auto;"/>
+ <img src="https://i.imgur.com/WC0VKh3.png" style="width: 100px; display: block; margin: 0 auto;"/>
 
 ## Project 02- PotterWorld
 
