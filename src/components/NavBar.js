@@ -1,23 +1,54 @@
-import react from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
+import 'bulma'
 
+const Navbar = () => {
+  const [navClassName, setNavClassName] = React.useState('navbar-menu')
 
-const navbar = (props) => {
+  const clickBurger = () => {
+    if (navClassName === 'navbar-menu') {
+      setNavClassName('navbar-menu is-active')
+    } else {
+      setNavClassName('navbar-menu')
+    }
+  }
+
   return (
-  <header>
-    <nav>
-      <div> <div>
-        <div><a href="/">THE LOGO </a> </div>
-        <div>
-          <ul>
-            <li><a href="/characters">Characters</a></li>
-            <li><a href="/spells/">Spell Cards</a></li>
-            <li><a href="/">School Houses</a></li>
-          </ul>
+    <div className="navbar has-background-black">
+      <div className="container">
+        <div className="navbar-brand">
+          <Link className="disneylogo navbar-item has-text-white has-text-weight-bold is-size-5" to="/">
+            <img src='https://i.imgur.com/IgqaRZy.png'/></Link>
+
+          <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={clickBurger}>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+
         </div>
-    </nav>
-  </header>
+        <div className="navbar-menu is-active">
+          <div id="navbarBasicExample" className={navClassName}>
+
+            <div className="navbar-end">
+              <div className="navbar-item">
+                <Link className='white' to={'/'}>Welcome</Link>
+              </div>
+              <div className="navbar-item">
+                <Link className='white' to={'/house'}>House Sort</Link>
+              </div>
+              <div className="navbar-item">
+                <Link className='white' to={'/spells'}>Spells</Link>
+              </div>
+              <div className="navbar-item">
+                <Link className='white'to={'/characters'}>Characters</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
-export default navbar
+export default Navbar
