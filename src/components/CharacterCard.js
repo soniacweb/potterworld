@@ -19,25 +19,26 @@ class CharacterCard extends React.Component {
   }
 
   CapitlizeString() {
-    return word.charAt(0).toUpperCase() + word.slice(1);
+    return word.charAt(0).toUpperCase() + word.slice(1)
   }
 
   render() {
-    console.log("char", this.state.character)
+    console.log('char', this.state.character)
     return (
       <section className="hero is-fullheight">
         <div className="tile is-ancestor">
           <div className="tile is-vertical is-4">
             <div className="tile">
               <div className="tile is-parent is-vertical">
-                <article className="tile is-child notification is-primary">
+                <article className="tile is-child notification">
                   <p className="title">Role: {this.state.character.role}</p>
+                  <p className="subtitle">School: {this.state.character.school}</p>
                 </article>
-                <article className="tile is-child notification is-warning">
+                <article className="tile is-child notification">
                   {/* capitalise the first letter */}
                   <p className="title ">Species: {(this.state.character.species)}</p>
                   <p className="title">Blood Status: {this.state.character.bloodStatus}</p>
-                  <p className="subtitle">Bottom tile</p>
+                  {/* <p className="subtitle">{this.state.character.house}</p> */}
                 </article>
               </div>
               {/* <div className="tile is-parent">
@@ -51,13 +52,18 @@ class CharacterCard extends React.Component {
                             </div> */}
             </div>
             <div className="tile is-parent">
-              <article className="tile is-child notification is-danger">
+              <article className="tile is-child notification">
                 {/* <p className="title">Wide tile</p> */}
-                <p className="subtitle">School: {this.state.character.school}</p>
-                <p className="subtitle">Member of Minstry of Magic: {this.state.character.ministryOfMagic ? "Yes" : "No"}</p>
-                <p className="subtitle">In the Order of the Pheonix: {this.state.character.orderOfThePhoenix ? "Yes" : "No"}</p>
-                <p className="subtitle">In Dumbledores Army: {this.state.character.dumbledoresArmy ? "Yes" : "No"}</p>
-                <p className="subtitle">Death Eater: {this.state.character.deathEater ? "Yes" : "No"}</p>
+                <p className="subtitle">Member of Minstry of Magic: {this.state.character.ministryOfMagic ? 'Yes' : 'No'}</p>
+                <p className="subtitle">In the Order of the Pheonix: {this.state.character.orderOfThePhoenix ? 'Yes' : 'No'}</p>
+                <p className="subtitle">In Dumbledore's Army? {this.state.character.dumbledoresArmy ? 'Yes' : 'No'}</p>
+                <p className="subtitle">Death Eater: {this.state.character.deathEater ? 'Yes' : 'No'}</p>
+                <p className="subtitle">Are they Animagus? {this.state.character.animagus ? 'Yes' : 'No'} </p>
+                <p className="subtitle">Animagus Form: {this.state.character.animagus} </p>
+                {/* <p className="subtitle">The famous Wand-Maker, Olivander, Recommends: {this.state.character.dateofbirth}</p>
+                <p className="subtitle">Worst Fear in Boggart form: {this.state.character.boggart}</p>
+                <p className="subtitle">Are they Animagus? {this.state.character.animagus ? 'Yes' : 'No'} </p>
+                <p className="subtitle">Animagus Form: {this.state.character.animagus} </p>  */}
                 <div className="content">
                   {/* <!-- Content --> */}
                 </div>
@@ -65,17 +71,20 @@ class CharacterCard extends React.Component {
             </div>
           </div>
           <div className="tile is-parent">
-            <article className="tile is-child notification is-success">
+            <article className="tile is-child notification">
               <div className="content">
-                <p className="title">Name: {this.state.character.name}</p>
+                <p className="title">{this.state.character.name}</p>
                 {/* if statement to return no known aliass */}
-                <p className="title">Alias: {this.state.alias}</p>
+                <p className="title">{this.state.character.house}</p>
                 <p className="subtitle">With even more content</p>
                 <div className="content">
                   <div className="tile is-parent">
-                    <article className="tile is-child notification is-info">
-                      <figure className="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png" />
+                    <article className="tile is-child notification">
+                      <figure className="image is-3by3">
+                        <img src="../images/the-gang.png" />
+                        <p className="subtitle">The famous Wand-Maker, Olivander, Recommends: {this.state.character.wand} for {this.state.character.name} </p>
+                        <p className="subtitle">When {this.state.character.name} first encountered a Boggart, their worst fears were revealed, and they saw a.. {this.state.character.boggart}!</p>
+                 
                       </figure>
                     </article>
                   </div>

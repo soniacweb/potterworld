@@ -31,20 +31,23 @@ class HouseSort extends React.Component {
               <p className="subtitle has-text-centered "></p>
               <Link to="/house" >
                 <div className="box has-text-centered button is-black center " onClick={() => {
-                  if (this.state.house === "Syltherin") {
-                    console.log("is Syltherin")
-                  } else if (this.state.house === "Ravenclaw") {
-                    console.log("is Ravenclaw")
-                  } else if (this.state.house === "Griffindor") {
-                    console.log("is Griffindor")
+                  if (this.state.house === 'Syltherin') {
+                    console.log('is Syltherin')
+                  } else if (this.state.house === 'Ravenclaw') {
+                    console.log('is Ravenclaw')
+                  } else if (this.state.house === 'Griffindor') {
+                    console.log('is Griffindor')
                   } else {
-                    console.log("is Hufflepuff")
+                    console.log('is Hufflepuff')
                   }
                 }}>
                                     Sorting Hat
                 </div>
               </Link>
               <div className="section">
+                <Link className="column" to="/Characters">
+                  <div className="box has-text-centered button is-black center ">Hogwarts Houses- A History</div>
+                </Link>
                 <Link className="column" to="/Characters">
                   <div className="box has-text-centered button is-black center ">Characters</div>
                 </Link>
