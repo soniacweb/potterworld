@@ -13,6 +13,17 @@ $body-background-color: black;
     background-image: url('../images/spells.jpg');
     background-size: cover;
 }
+
+.single-spell.hero {
+  background-image: url('../images/the-forbidden-forest.jpg');
+  background-size: cover;
+}
+
+.single-character.hero {
+  background-image: url('../images/diagon-alley.jpg');
+  background-size: cover;
+}
+
 .hero.welcome {
   background-image: url('../images/hogwarts_background.jpg');
   background-size: cover;
@@ -27,6 +38,7 @@ html, .section {
   background-color: $body-background-color;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
 
 }
 
@@ -79,10 +91,22 @@ html, .section {
 
   // Navbar 
   
+// .navbar-item img {
+//     width: 100px;
+//     max-height: 7rem;
+//   }
+
+.white {
+color: white; 
+}
+
+.hplogo {
+width: 70px;
+// height: 150px;
+}
 .navbar-item img {
-    width: 70px;
-    max-height: 2 rem;
-  }
+max-height: 5rem;
+}
 
   div.navbar-item {
     background-color: black;
@@ -290,12 +314,15 @@ footer.card-footer {
 
 .tile.is-vertical {
   background-color: black;
-  opacity: 90%;
+  opacity: 60%;
+  color: white;
 }
 
 .tile.is-child {
 background-color: black;
-// opacity: 95%;
+opacity: 80%;
+color: white;
+
 }
 
 p.title {

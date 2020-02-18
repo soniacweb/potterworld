@@ -25,7 +25,7 @@ class CharacterCard extends React.Component {
   render() {
     console.log('char', this.state.character)
     return (
-      <section className="hero is-fullheight">
+      <section className="single-character hero is-fullheight">
         <div className="tile is-ancestor">
           <div className="tile is-vertical is-4">
             <div className="tile">

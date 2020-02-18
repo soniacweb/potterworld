@@ -25,7 +25,7 @@ class SpellCard extends React.Component {
     console.log('spell', this.state.spell)
     console.log('spell detail', this.state.spell[0].spell)
     return (
-      <section className="hero is-fullheight">
+      <section className="single-spell hero is-fullheight">
         <main role="main">
           <div className="card has-text-centered is-wide">
             <header className="card-header">

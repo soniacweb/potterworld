@@ -17,8 +17,8 @@ const NavBar = () => {
     <div className="navbar has-background-black">
       {/* <div className="container"> */}
       <div className="navbar-brand">
-        <Link className="harrypotter navbar-item has-text-white has-text-weight-bold" to="/">
-          <img src='https://i.imgur.com/nGuzVQf.png'/></Link>
+        <Link className="harrypotter navbar-item" to="/">
+          <img className="hplogo" src='../images/hp-logo.png'/></Link>
 
         <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={clickBurger}>
           <span aria-hidden="true"></span>
