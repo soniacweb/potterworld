@@ -64,7 +64,7 @@ class HouseHistoryCard extends React.Component {
                     <article className="tile is-child notification">
                       <figure className="image is-3by3">
                         <img src="https://i.imgur.com/sIuqs9a.jpg" />
-                        <p className="subtitle">Famous members include {this.state.house.members} for house {this.state.house.name} </p>
+                        <p className="subtitle">House Hall of Fame: {this.state.house.members} for house {this.state.house.name} </p>
                       </figure>
                     </article>
                   </div>

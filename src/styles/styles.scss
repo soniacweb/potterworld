@@ -40,6 +40,14 @@ div.character.hero.is-fullheight {
   background-size: cover;
 }
 
+// Founders page 
+
+div.founders.hero.is-fullheight {
+  background-image: url('https://i.imgur.com/qOYBqgz.jpg');
+  background-size: cover;
+}
+
+
 html, .section {
   background-color: $body-background-color;
   background-repeat: no-repeat;
@@ -377,4 +385,13 @@ h1.has-text-white {
   overflow: hidden;
 }
 
+// founders title
+
+.history-title {
+  font-size: 60px;
+}
+
+.history-subtitle {
+font-size: 25px;
+}
 @import '~bulma'
