@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class CharacterCard extends React.Component {
   constructor() {
@@ -94,6 +95,11 @@ class CharacterCard extends React.Component {
             </article>
           </div>
         </div>
+        <Link to="/characters">
+          <div className="box has-text-centered button is-black center">
+                            Return to Characters
+          </div>
+        </Link>
       </section>
     )
   }

@@ -18,6 +18,8 @@ import HouseSort2 from './components/HouseSort2'
 import HouseSort from './components/HouseSort'
 import Spells from './components/Spells'
 import SpellCard from './components/SpellCard'
+import HouseHistory from './components/HouseHistory'
+import HouseHistoryCard from './components/HouseHistoryCard'
 import Characters from './components/Characters'
 import CharacterCard from './components/CharacterCard'
 
@@ -32,6 +34,11 @@ const App = () => (
       <Route exact path="/spells/:id" component={SpellCard} />
       <Route exact path="/characters/:id" component={CharacterCard} />
       <Route exact path="/characters" component={Characters} />
+
+
+      <Route exact path="/houses/:id" component={HouseHistoryCard} />
+      <Route exact path="/houses" component={HouseHistory} />
+
     </Switch>
     {/* <CharacterCard /> */}
     {/* <Characters /> */}

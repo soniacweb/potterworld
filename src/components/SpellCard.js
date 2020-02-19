@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 class SpellCard extends React.Component {
   constructor() {
@@ -36,12 +38,19 @@ class SpellCard extends React.Component {
               <p>Type: {this.state.spell[0].type}</p>
               <h1>According to the world of witchcraft and wizardry, it {this.state.spell[0].effect}</h1>
             </div>
+      
             {/* <footer className="card-footer">
                             &copy; 2017 Footer info
             </footer> */}
           </div>
         </main>
+        <Link to="/spells">
+          <div className="box has-text-centered button is-black center">
+                            Return to Spells
+          </div>
+        </Link>
       </section>
+      
 
 
 

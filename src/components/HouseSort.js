@@ -45,7 +45,7 @@ class HouseSort extends React.Component {
                 </div>
               </Link>
               <div className="section">
-                <Link className="column" to="/Characters">
+                <Link className="column" to="/houses">
                   <div className="box has-text-centered button is-black center ">Hogwarts Houses- A History</div>
                 </Link>
                 <Link className="column" to="/Characters">
