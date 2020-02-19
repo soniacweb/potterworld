@@ -42,15 +42,6 @@ class CharacterCard extends React.Component {
                   {/* <p className="subtitle">{this.state.character.house}</p> */}
                 </article>
               </div>
-              {/* <div className="tile is-parent">
-                                <article className="tile is-child notification is-info">
-                                    <p className="title">Middle tile</p>
-                                    <p className="subtitle">With an image</p>
-                                    <figure className="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/640x480.png" />
-                                    </figure>
-                                </article>
-                            </div> */}
             </div>
             <div className="tile is-parent">
               <article className="tile is-child notification">

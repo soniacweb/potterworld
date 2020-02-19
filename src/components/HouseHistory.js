@@ -32,7 +32,7 @@ class HouseHistory extends React.Component {
               <h2 className="history-subtitle">
             What do we know about the four people who actually founded Hogwarts?</h2>
               <p>Enjoy the illustration of <strong>Godric Gryffindor, Helga Hufflepuff, Salazar Slytherin and Rowena Ravenclaw.</strong> 
-       According to Professor Binns, Godric, Helga, Salazar and Rowena ‘built this castle together, far from prying Muggle eyes’. 
+        According to Professor Binns, Godric, Helga, Salazar and Rowena ‘built this castle together, far from prying Muggle eyes’. 
         For the most part, the four worked on creating Hogwarts in harmony, but it wasn’t long before Salazar Slytherin’s troubling 
         views on the wizarding world caused an almighty rift...
               </p>
