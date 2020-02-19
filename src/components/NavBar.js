@@ -18,7 +18,7 @@ const NavBar = () => {
       {/* <div className="container"> */}
       <div className="navbar-brand">
         <Link className="harrypotter navbar-item" to="/">
-          <img className="hplogo" src='../images/hp-logo.png'/></Link>
+          <img className="hplogo" src='https://i.imgur.com/DuuiqQ6.jpg'/></Link>
 
         <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={clickBurger}>
           <span aria-hidden="true"></span>

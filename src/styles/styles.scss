@@ -101,7 +101,7 @@ color: white;
 }
 
 .hplogo {
-width: 70px;
+width: 40px;
 // height: 150px;
 }
 .navbar-item img {
@@ -314,7 +314,7 @@ footer.card-footer {
 
 .tile.is-vertical {
   background-color: black;
-  opacity: 60%;
+  opacity: 59%;
   color: white;
 }
 
@@ -327,6 +327,18 @@ color: white;
 
 p.title {
   opacity: 100%;
+}
+
+div.single-spell.card-content {
+  background-color: black;
+  // opacity: 100%;
+  color: white;
+}
+
+h1.has-text-white {
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
 }
 
 @import '~bulma'

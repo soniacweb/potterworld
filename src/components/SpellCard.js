@@ -31,17 +31,20 @@ class SpellCard extends React.Component {
             <header className="card-header">
               {/* <p>Header info</p> */}
             </header>
-            <div className="card-content">
+            <div className="single-spell card-content">
               <h1>Name: {this.state.spell[0].spell}</h1>
               <p>Type: {this.state.spell[0].type}</p>
-              <h1>Effect: {this.state.spell[0].effect}</h1>
+              <h1>According to the world of witchcraft and wizardry, it {this.state.spell[0].effect}</h1>
             </div>
-            <footer className="card-footer">
+            {/* <footer className="card-footer">
                             &copy; 2017 Footer info
-            </footer>
+            </footer> */}
           </div>
         </main>
       </section>
+
+
+
     )
   }
 }

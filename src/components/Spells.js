@@ -136,11 +136,10 @@ class Spells extends React.Component {
                       <Link to={`/spells/${spell._id}`}>
                         <div className="btn card has-background-black">
                           <div className="card-content">
-                            <p className="has-text-white">{spell.spell}</p>
+                            <h1 className="has-text-white">{spell.spell}</h1>
                             {/* {console.log(spell.spell)} */}
-                            {/* <p className="has-text-white">Type: {spell.type}</p> */}
+                            {/* <p className="has-text-white">A {spell.type}</p> */}
                             {/* <p className="has-text-white">Effect: {spell.effect}</p> */}
-
                           </div>
                         </div>
                       </Link>
