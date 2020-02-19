@@ -265,6 +265,36 @@ footer.card-footer {
     color: white;
   }
 
+  // forms and search bars
+
+  form.form {
+    font-family: 'Cinzel Decorative', cursive;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  button.button.is.small.rounded {
+    margin: -5px 20px;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .input#search-input {
+    width: 50px;
+    padding: 20px;
+  }
+  .select {
+    font-family: 'Cinzel Decorative', cursive;
+    width: 100px;
+    height: 100px;
+  }
+
+  .button.is-black {
+    margin: 2px auto;
+    // padding: 5px;
+    // height: 50px;
+    width: 350px;
+  }
+
   // .sidenav {
   //   height: 100%; /* 100% Full-height */
   //   width: 0; /* 0 width - change this with JavaScript */
