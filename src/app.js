@@ -34,11 +34,8 @@ const App = () => (
       <Route exact path="/spells/:id" component={SpellCard} />
       <Route exact path="/characters/:id" component={CharacterCard} />
       <Route exact path="/characters" component={Characters} />
-
-
-      <Route exact path="/houses/:id" component={HouseHistoryCard} />
       <Route exact path="/houses" component={HouseHistory} />
-
+      <Route exact path="/houses/:id" component={HouseHistoryCard} />      
     </Switch>
     {/* <CharacterCard /> */}
     {/* <Characters /> */}
