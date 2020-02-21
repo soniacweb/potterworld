@@ -50,7 +50,74 @@ In order to request the correct data, it is important to read through the docume
 
 ## Fetching the API
 
+#### Testing Endpoints using Insomnia
+
+<img src="https://i.imgur.com/uQ1mcC6.png" style="500px margin: 0 auto;" />
+
 ## Rendering
+
+## Filtering and Search Features: Building a basic React.js form with no additional libraries
+
+For the Spells spage, we have a filter form consisting of types of spells the user can read through and select. We also have a basic search funtionality too.
+
+A ‘spells from’ input box, which is an input of type text.
+A ‘spells’ select list, which will display a unique list of spells based on the API's listing.
+
+```
+filter(e) {
+    this.setState({ filter: e.target.value })
+  }
+
+
+  typeFilter(e) {
+    e.preventDefault()
+    this.setState({
+      filterType: e.target.value
+    })
+   
+  }
+```
+
+We needed to capture the users input for each of the ‘spells form’ and its respective fields, and there are two approaches in React.js to achieve that- Controlled components vs Uncontrolled components.
+
+We used the controlled method, where a controlled input value is directly tracked and set/updated by React. The value for each input in a form is stored in local state and updated by calling `{this.filter.bind(this)}` from the onChange event handler.
+
+```
+ <form className="form" >
+            <select onChange={(e) => this.typeFilter(e)}>
+              <option value="All">All</option>
+              <option value="Spell">Spells</option>
+              <option value="Hex">Hex</option>
+              <option value="Charm">Charms</option>
+              <option value="Enchantment">Enchantments</option>
+            </select>
+            <input
+              type="text"
+              id='search-input'
+              placeholder='Search...'
+              name='query'
+              onChange={this.filter.bind(this)}
+            />
+            <button className="button is small is rounded is-black">
+                            Filter
+            </button>
+          </form>
+          <div className="container">
+            <div className="columns is-mobile is-multiline">
+              {this.state.spells  
+                .filter(elem=>{
+                  if (this.state.filterType === 'All'){
+                    return elem
+                  } else return elem.type === this.state.filterType
+                })
+                .filter(elem=>{
+                  return elem.spell.toLowerCase().includes(this.state.filter.toLowerCase())
+                })
+
+
+```
+
+We accessed spells, and 'types' from `this.state`. 
 
 # Wins
 Retrieving different types of data from the API and exploring it using different combinatio  of urls. The excercise helped me better understand how APIs work.

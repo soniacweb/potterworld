@@ -20,44 +20,6 @@ class Spells extends React.Component {
       .then(res => this.setState({ spells: res.data }))
   }
 
-  // let updatedList = [this.state.spells]
-  // updatedList = updatedList.filter((item)=>{
-  //     return !Object.values(item).map((value)=>{
-  //         return String(value)
-  //     }).find((value=>{
-  //         return value.includes(query)
-  //     }))
-  //     // console.log("up",updatedList )
-  // })
-
-  // this.state.players.filter(player => player.name.includes(this.state.player))
-
-  // handleOnChange(e) {
-  //     const query = e.target.value
-  //     if (query === "") {
-  //         this.setState({
-  //             query: '',
-  //             // search: false
-  //         })
-  //     } else {
-  //         let updatedList = [...this.state.spells]
-  //         updatedList = updatedList.filter((item)=> item.spell.includes(query))
-  //             // console.log("up",updatedList )
-
-  //             // updatedList = updatedList[0].spell.filter((item => {
-  //             //     return item.toLowerCase().search(
-  //             //         this.state.query.toLowerCase()) !== -1;
-  //             // }))
-  //             this.setState({
-  //                 spells: updatedList,
-  //                 query: query,
-  //                 search: true,
-  //                 message: ''
-
-  //             })
-
-  //     }
-  // }
 
   filter(e) {
     this.setState({ filter: e.target.value })
@@ -70,13 +32,13 @@ class Spells extends React.Component {
       filterType: e.target.value
     })
     console.log('TESSSSSTTTTYYY',this.state.filterType)
-    // this.state.spells.map(e => { })
+   
   }
 
   render() {
     // const { query } = this.state
     console.log(this.state.spells)
-    console.log('state falue',this.state.filter)
+    console.log('state value',this.state.filter)
     // console.log(this.state.search)
     const items = [...this.state.spells]
     // console.log("items",items)
@@ -90,67 +52,69 @@ class Spells extends React.Component {
         
     return (
     // <h1>hello</h1>
-      <section>
-        <div className="hero is-fullheight"></div>
-        <div className="section background">
-          <form className="form" >
-            {/* <form className="form" onClick={(e) => this.handleFilter(e)}> */}
-            <select onChange={(e) => this.typeFilter(e)}>
-              <option value="All">All</option>
-              <option value="Spell">Spells</option>
-              <option value="Hex">Hex</option>
-              <option value="Charm">Charms</option>
-              <option value="Enchantment">Enchantments</option>
-            </select>
-            <input
-              type="text"
-              // value={query}
-              id='search-input'
-              placeholder='Search...'
-              name='query'
-              onChange={this.filter.bind(this)}
+      <div className="fade-in"> 
+        <section>
+          <div className="hero is-fullheight"></div>
+          <div className="section background">
+            <form className="form" >
+              {/* <form className="form" onClick={(e) => this.handleFilter(e)}> */}
+              <select onChange={(e) => this.typeFilter(e)}>
+                <option value="All">All</option>
+                <option value="Spell">Spells</option>
+                <option value="Hex">Hex</option>
+                <option value="Charm">Charms</option>
+                <option value="Enchantment">Enchantments</option>
+              </select>
+              <input
+                type="text"
+                // value={query}
+                id='search-input'
+                placeholder='Search...'
+                name='query'
+                onChange={this.filter.bind(this)}
               // onChange={(e) => this.handleOnChange(e)}
-            />
-            <button className="button is small is rounded is-black">
+              />
+              <button className="button is small is rounded is-black">
                             Filter
-            </button>
-          </form>
-          <div className="container">
-            <div className="columns is-mobile is-multiline">
-              {/* {console.log("selpp", this.state.spell)} */}
-              {this.state.spells  
-                .filter(elem=>{
-                  if (this.state.filterType === 'All'){
-                    return elem
-                  } else return elem.type === this.state.filterType
-                })
-                .filter(elem=>{
+              </button>
+            </form>
+            <div className="container">
+              <div className="columns is-mobile is-multiline">
+                {/* {console.log("selpp", this.state.spell)} */}
+                {this.state.spells  
+                  .filter(elem=>{
+                    if (this.state.filterType === 'All'){
+                      return elem
+                    } else return elem.type === this.state.filterType
+                  })
+                  .filter(elem=>{
                   // if(this.state.filterType){
                   // return elem.type === this.state.filterType
-                  return elem.spell.toLowerCase().includes(this.state.filter.toLowerCase())
+                    return elem.spell.toLowerCase().includes(this.state.filter.toLowerCase())
                   // }
-                })
-                .map((spell, i) => {
-                  return (
-                    <div key={i} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-                      <Link to={`/spells/${spell._id}`}>
-                        <div className="btn card has-background-black">
-                          <div className="card-content">
-                            <h1 className="has-text-white">{spell.spell}</h1>
-                            {/* {console.log(spell.spell)} */}
-                            {/* <p className="has-text-white">A {spell.type}</p> */}
-                            {/* <p className="has-text-white">Effect: {spell.effect}</p> */}
+                  })
+                  .map((spell, i) => {
+                    return (
+                      <div key={i} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                        <Link to={`/spells/${spell._id}`}>
+                          <div className="btn card has-background-black">
+                            <div className="card-content">
+                              <h1 className="has-text-white">{spell.spell}</h1>
+                              {/* {console.log(spell.spell)} */}
+                              {/* <p className="has-text-white">A {spell.type}</p> */}
+                              {/* <p className="has-text-white">Effect: {spell.effect}</p> */}
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    </div>
-                  )
-                })
-              }
+                        </Link>
+                      </div>
+                    )
+                  })
+                }
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     )
   }
 

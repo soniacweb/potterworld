@@ -69,9 +69,10 @@ class Characters extends React.Component {
     console.log(this.state.filter)
     return (
     // <h1>hello</h1>
-    
-      <div className="section">
-        <div className="character hero is-fullheight"></div>
+      <div className="fade-in">
+        <div className="section">
+          <div className="character hero is-fullheight"></div>
+        </div>
         <form className="form" >
           <select onChange={(e) => this.bloodFilter(e)}>
             <option value="All">All</option>

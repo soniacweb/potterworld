@@ -23,46 +23,48 @@ class HouseSort extends React.Component {
   render() {
     console.log(this.state.house)
     return (
-      <section className="hero sortinghat is-fullheight">
-        <div className="hero-body">
-          <div className="container">
-            <div className="image is-2by1">
-              <p className="title has-text-white has-text-centered title is-2  has-text-weight-bold" >Home</p>
-              <p className="subtitle has-text-centered "></p>
-              <Link to="/house" >
-                <div className="box has-text-centered button is-black center " onClick={() => {
-                  if (this.state.house === 'Syltherin') {
-                    console.log('is Syltherin')
-                  } else if (this.state.house === 'Ravenclaw') {
-                    console.log('is Ravenclaw')
-                  } else if (this.state.house === 'Griffindor') {
-                    console.log('is Griffindor')
-                  } else {
-                    console.log('is Hufflepuff')
-                  }
-                }}>
+      <div className="fade-in"> 
+        <section className="hero sortinghat is-fullheight">
+          <div className="hero-body">
+            <div className="container">
+              <div className="image is-2by1">
+                <p className="title has-text-white has-text-centered title is-2  has-text-weight-bold" >Home</p>
+                <p className="subtitle has-text-centered "></p>
+                <Link to="/house" >
+                  <div className="box has-text-centered button is-black center " onClick={() => {
+                    if (this.state.house === 'Syltherin') {
+                      console.log('is Syltherin')
+                    } else if (this.state.house === 'Ravenclaw') {
+                      console.log('is Ravenclaw')
+                    } else if (this.state.house === 'Griffindor') {
+                      console.log('is Griffindor')
+                    } else {
+                      console.log('is Hufflepuff')
+                    }
+                  }}>
                                     Sorting Hat
+                  </div>
+                </Link>
+                <div className="section">
+                  <Link className="column" to="/houses">
+                    <div className="box has-text-centered button is-black center ">Hogwarts Houses- A History</div>
+                  </Link>
+                  <Link className="column" to="/Characters">
+                    <div className="box has-text-centered button is-black center ">Characters</div>
+                  </Link>
+                  <Link className="column" to="/spells">
+                    <div className="box has-text-centered button is-black center ">Spells</div>
+                  </Link>
                 </div>
-              </Link>
-              <div className="section">
-                <Link className="column" to="/houses">
-                  <div className="box has-text-centered button is-black center ">Hogwarts Houses- A History</div>
-                </Link>
-                <Link className="column" to="/Characters">
-                  <div className="box has-text-centered button is-black center ">Characters</div>
-                </Link>
-                <Link className="column" to="/spells">
-                  <div className="box has-text-centered button is-black center ">Spells</div>
-                </Link>
-              </div>
-              <div className="columns">
+                <div className="columns">
+
+                </div>
 
               </div>
-
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     )
   }
 }
