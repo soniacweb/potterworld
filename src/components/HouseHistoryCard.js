@@ -66,8 +66,8 @@ class HouseHistoryCard extends React.Component {
                       <figure className="image is-3by3">
                         <img src="https://i.imgur.com/sIuqs9a.jpg" />
                         <p className="subtitle"> {this.state.househistory.founder} founded this great house. It is said, {this.state.househistory.founder} valued {this.state.househistory.values} and wanted those who shared those values to enter their founding house.</p>
-                        <p className="subtitle">Hall of Fame: {this.state.househistory.members} </p>
-                        <p className="subtitle">When {this.state.househistory.name} first encountered a Boggart, it revealedtheir worst fears- {this.state.househistory.boggart}!</p>
+                        {/* <p className="subtitle">Hall of Fame: {this.state.househistory.members} </p> */}
+                        {/* <p className="subtitle">When {this.state.househistory.name} first encountered a Boggart, it revealedtheir worst fears- {this.state.househistory.boggart}!</p> */}
                         <p className="subtitle"> {this.state.househistory.name} Hall of Fame: {this.state.househistory.members} </p>
 
                       </figure>
