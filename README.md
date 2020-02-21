@@ -2,13 +2,13 @@
  
  <img src="https://i.imgur.com/Bo65c7f.jpg" style="width: 500px; display: block; margin: 0 auto;"/>
 
-## Project 02- PotterWorld
+## Project 02- Potterly
 
 ### Pair programming exercise with fellow student developer, Coung Tran.
 
 # Intro 
 
-PotterWorld is fantasy media app, delving into the fictional universe centered around the Harry Potter novel series by writer, J. K. Rowling. We used an unnofficial Harry Potter API and realised too late in the day, the images weren't unfortunately sufficiant for this app to take inspiration from to the Wizarding World app.
+Potterly is fantasy media app, delving into the fictional universe centered around the Harry Potter novel series by writer, J. K. Rowling. This project is for personal use, and no copyright infringement is intended. We used an unnofficial Harry Potter API - https://www.potterapi.com/.
 
 
 # Getting Started
@@ -40,25 +40,44 @@ Be deployed online and accessible to the public.
 - Insomnia
 - Git
 - GitHub
+- Mockplus
 
-# Wireframing
+# Wireframing- Mockups
 
-Our app has 4 main pages which is Welcome, Characters, Spells and House Sorting. 
+Our app has 4 main pages which is Welcome, Characters, Spells and House Sorting.
 
-# Project Structure
-In order to request the correct data, it is important to read through the documentation. We spent sometime on testing the urls. 
+The general design was fun and interesting to create. We decided to use Bulma fullheight hero images to bring our mockups to life, with the general theme for users to navigate using buttons at the bottom. We also added a responsive navbar fopr mobile.
 
-## Fetching the API
+### Welcome Page
+
+<img src="https://i.imgur.com/Uxmu70n.png" style="400px margin: 0 auto;" />
+
+### House Sort
+
+<img src="https://i.imgur.com/KNCnYPr.png" style="400px margin: 0 auto;" />
+
+### Individual Character Page 
+
+We played around with the opacity for the Bulma article backgrouns to get the desired effect. 
+
+<img src="https://i.imgur.com/lla76ds.png" style="400px margin: 0 auto;" />
+
+### Individual Spell Page 
+
+<img src="https://i.imgur.com/bU4BOsR.png" style="400px margin: 0 auto;" />
+
+## Project Structure and Fetching from the API
+In order to request the correct data, it was important to read through the Harry Potter API documentation. We spent sometime on testing the url endpoints using Insomnia. 
 
 #### Testing Endpoints using Insomnia
 
-<img src="https://i.imgur.com/uQ1mcC6.png" style="500px margin: 0 auto;" />
+<img src="https://i.imgur.com/uQ1mcC6.png" style="400px margin: 0 auto;" />
 
 ## Rendering
 
 ## Filtering and Search Features: Building a basic React.js form with no additional libraries
 
-For the Spells spage, we have a filter form consisting of types of spells the user can read through and select. We also have a basic search funtionality too.
+For the Spells page, we have a filter form consisting of types of spells the user can read through and select. We also have a basic search funtionality too.
 
 A ‘spells from’ input box, which is an input of type text.
 A ‘spells’ select list, which will display a unique list of spells based on the API's listing.
@@ -120,13 +139,18 @@ We used the controlled method, where a controlled input value is directly tracke
 We accessed spells, and 'types' from `this.state`. 
 
 # Wins
-Retrieving different types of data from the API and exploring it using different combinatio  of urls. The excercise helped me better understand how APIs work.
-Explored the use of Bulma, and CSS animation combination.
+Retrieving different types of data from the API and exploring it using different combination of urls. The excercise helped me better understand how APIs work. Explored the use of Bulma, and CSS animation combination.
 
 I learned a lot about pair programming through this exercise. We had a lot of fun working together but it really highlighted to me how a different pace of learning in combination with working towards a strict 2-day deadline, can impact the workflow. It inspired me to want to explore React further after the exercise!
 
 # Challenges  
-We had initially only spent just over a week on React before getting assigned a 2-day project. Out dreams were a tad on the ambitious side, and soon realised we couldn't get the design polished up in time.
+We had initially only spent just over a week on React before getting assigned a 2-day project. Out dreams were a tad on the ambitious side, and soon realised we couldn't get the design polished up in time. Wel also realised too late in the day, the images weren't unfortunately sufficiant for this app to take inspiration from to the Wizarding World app, so we therefore needed to improvise with the design.
+
+# Key Learnings
 
 While working on the project, I had to refer to the React documentation a great deal, read, learn, and code at the same time. It was challenging  to provide a completely finished app, but I'm happy Cuong and I could continue working on it after the deadline, in our spare time. 
 
+# Future Features
+
+- Adapting the app to be mobile friendly.
+- I would like to play around with a React animation library and try and incorporate some animation in to really make the information stand out like on WizardingWorld or Pottermore. 
