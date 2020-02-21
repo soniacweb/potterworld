@@ -58,7 +58,7 @@ The general design was fun and interesting to create. We decided to use Bulma fu
 
 ### Individual Character Page 
 
-We played around with the opacity for the Bulma article backgrouns to get the desired effect. 
+We played around with the opacity for the Bulma article backgrounds to get the desired modal background effect. 
 
 <img src="https://i.imgur.com/lla76ds.png" style="400px margin: 0 auto;" />
 
@@ -144,9 +144,11 @@ We used the controlled method, where a controlled input value is directly tracke
 We accessed spells, and 'types' from `this.state`. 
 
 # Wins
-Retrieving different types of data from the API and exploring it using different combination of urls. The excercise helped me better understand how APIs work. Explored the use of Bulma, and CSS animation combination.
+- I like the overall look of the app. We wanted to stick with old-school looking illustrations, a nod to the books rather than the movies. 
 
-I learned a lot about pair programming through this exercise. We had a lot of fun working together but it really highlighted to me how a different pace of learning in combination with working towards a strict 2-day deadline, can impact the workflow. It inspired me to want to explore React further after the exercise!
+- Retrieving different types of data from the API and exploring it using different combination of urls. The excercise helped me better understand how APIs work. Explored the use of Bulma, and CSS animation combination.
+
+
 
 # Challenges  
 We had initially only spent just over a week on React before getting assigned a 2-day project. Out dreams were a tad on the ambitious side, and soon realised we couldn't get the design polished up in time. Wel also realised too late in the day, the images weren't unfortunately sufficiant for this app to take inspiration from to the Wizarding World app, so we therefore needed to improvise with the design.
@@ -154,6 +156,8 @@ We had initially only spent just over a week on React before getting assigned a 
 # Key Learnings
 
 While working on the project, I had to refer to the React documentation a great deal, read, learn, and code at the same time. It was challenging  to provide a completely finished app, but I'm happy Cuong and I could continue working on it after the deadline, in our spare time. 
+
+I learned a lot about pair programming through this exercise. We had a lot of fun working together but it really highlighted to me how a different pace of learning in combination with working towards a strict 2-day deadline, can impact the workflow. It inspired me to want to explore React further after the exercise!
 
 # Future Features
 
