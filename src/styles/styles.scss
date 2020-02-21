@@ -40,6 +40,21 @@ $body-background-color: black;
     background-size: cover;
 }
 
+// general - search bar and filter
+
+#search-input {
+  width: 200px;
+  height: 40px;
+  padding: 20px;
+}
+
+.select {
+  font-family: 'Cinzel Decorative', cursive;
+  width: 200px;
+  // height: 200px;
+}
+
+
 // character page 
 
 div.character.hero.is-fullheight {
@@ -156,6 +171,15 @@ html, .section {
 //     max-height: 7rem;
 //   }
 
+// Sticky navbar
+div.navbar {
+position: fixed; 
+width: 100%;
+}
+
+.navbar-item {
+  background-color: black;
+}
 .white {
 color: white; 
 }
@@ -253,7 +277,7 @@ footer.card-footer {
   }
 
   button.button.is.small.rounded {
-    margin: -5px 20px;
+    margin: 0px 20px;
     font-family: 'Cinzel Decorative', cursive;
   }
 
@@ -261,10 +285,11 @@ footer.card-footer {
     width: 50px;
     padding: 20px;
   }
+
   .select {
     font-family: 'Cinzel Decorative', cursive;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 150px;
   }
 
   .button.is-black {

@@ -26,7 +26,8 @@ Have a visually impressive design
 Be deployed online and accessible to the public.
 
 ## Timeframe
-2 days
+2 days - v1
+5 days - v2
 
 # Technologies used
 - HTML5
@@ -44,7 +45,7 @@ Be deployed online and accessible to the public.
 
 # Wireframing- Mockups
 
-Our app has 5 main pages which is Welcome, Characters, Spells, Hogwarts- A History, and House Sorting.
+Our app has 5 main pages: Welcome, Characters, Spells, Hogwarts- A History, and House Sorting.
 
 The general design was fun and interesting to create. We decided to use Bulma fullheight hero images to bring our mockups to life, with the general theme for users to navigate using buttons at the bottom. We also added a responsive navbar fopr mobile.
 
