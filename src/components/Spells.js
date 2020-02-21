@@ -74,7 +74,7 @@ class Spells extends React.Component {
                 onChange={this.filter.bind(this)}
               // onChange={(e) => this.handleOnChange(e)}
               />
-              <button className="button is small is rounded is-black">
+              <button id="searchspells" className="button is small is rounded is-black">
                             Filter
               </button>
             </form>

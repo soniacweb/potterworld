@@ -32,13 +32,13 @@ class CharacterCard extends React.Component {
             <div className="tile">
               <div className="tile is-parent is-vertical">
                 <article className="tile is-child notification">
-                  <p className="title">Role: {this.state.character.role}</p>
-                  <p className="subtitle">School: {this.state.character.school}</p>
+                  <p id="subtitle" className="title">Role: {this.state.character.role}</p>
+                  <p id="subtitle" className="subtitle">School: {this.state.character.school}</p>
                 </article>
                 <article className="tile is-child notification">
                   {/* capitalise the first letter */}
-                  <p className="title ">Species: {(this.state.character.species)}</p>
-                  <p className="title">Blood Status: {this.state.character.bloodStatus}</p>
+                  <p id="subtitle" className="title ">Species: {(this.state.character.species)}</p>
+                  <p id="subtitle" className="title">Blood Status: {this.state.character.bloodStatus}</p>
                   {/* <p className="subtitle">{this.state.character.house}</p> */}
                 </article>
               </div>
@@ -65,17 +65,17 @@ class CharacterCard extends React.Component {
           <div className="tile is-parent">
             <article className="tile is-child notification">
               <div className="content">
-                <p className="title">{this.state.character.name}</p>
+                <p id="largersubtitle" className="title">{this.state.character.name}</p>
                 {/* if statement to return no known aliass */}
-                <p className="title">{this.state.character.house}</p>
-                <p className="subtitle">With even more content</p>
+                <p id="largersubtitle" className="title">{this.state.character.house}</p>
+                <p id="subtitle" className="subtitle">With even more content</p>
                 <div className="content">
                   <div className="tile is-parent">
                     <article className="tile is-child notification">
                       <figure className="image is-3by3">
                         <img src="../images/the-gang.png" />
-                        <p className="subtitle">The famous Wand-Maker, Olivander, Recommends: {this.state.character.wand} for {this.state.character.name} </p>
-                        <p className="subtitle">When {this.state.character.name} first encountered a Boggart, their worst fears were revealed, and they saw a.. {this.state.character.boggart}!</p>
+                        <p id="largersubtitle" className="subtitle">The famous Wand-Maker, Olivander, Recommends: {this.state.character.wand} for {this.state.character.name} </p>
+                        <p id="largersubtitle" className="subtitle">When {this.state.character.name} first encountered a Boggart, their worst fears were revealed, and they saw a.. {this.state.character.boggart}!</p>
                  
                       </figure>
                     </article>
@@ -89,7 +89,7 @@ class CharacterCard extends React.Component {
         </div>
        
         <Link to="/characters">
-          <div className="box has-text-centered button is-black center">
+          <div id="returntocharacters" className="box has-text-centered button is-black center">
                             Return to Characters
           </div>
         </Link>

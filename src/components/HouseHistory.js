@@ -22,16 +22,16 @@ class HouseHistory extends React.Component {
     console.log(this.state.houses)
     return (
       <div className="fade-in"> 
-        <div className="section">
+        <div id="founders" className="section">
           <div className="founders hero is-fullheight"></div>
           <div className="container">
             <div className="columns is-mobile is-multiline">
-              <section className="section">
+              <section id="founders-height" className="section">
                 {/* <div className="container"> */}
-                <h1 className="history-title">Hogwarts - A History</h1>
-                <h2 className="history-subtitle">
+                <h1 id="paragraphs" className="history-title">Hogwarts - A History</h1>
+                <h2 id="paragraphs" className="history-subtitle">
             What do we know about the four people who actually founded Hogwarts?</h2>
-                <p>Enjoy the illustration of <strong>Godric Gryffindor, Helga Hufflepuff, Salazar Slytherin and Rowena Ravenclaw.</strong> 
+                <p id="smallerparagraphs">Enjoy the illustration of <strong>Godric Gryffindor, Helga Hufflepuff, Salazar Slytherin and Rowena Ravenclaw.</strong> 
         According to Professor Binns, Godric, Helga, Salazar and Rowena ‘built this castle together, far from prying Muggle eyes’. 
         For the most part, the four worked on creating Hogwarts in harmony, but it wasn’t long before Salazar Slytherin’s troubling 
         views on the wizarding world caused an almighty rift...
@@ -64,7 +64,7 @@ class HouseHistory extends React.Component {
               }
             </div>
           </div>
-          <Link to="/house">
+          <Link id="housebutton" to="/house">
             <div className="box has-text-centered button is-black center">
                           Return to house sort
             </div>

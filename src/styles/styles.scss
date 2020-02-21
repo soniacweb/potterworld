@@ -364,4 +364,165 @@ h1.has-text-white {
 .history-subtitle {
 font-size: 25px;
 }
+
+
+// iPhone X in portrait & landscape
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { 
+
+  // Welcome page 
+  .hero.welcome {
+    background-image: url('../images/hogwarts_background.jpg');
+    // background-size: cover;
+    background-position: center;
+  }
+
+  p.title.has-text-centered.is-2 {
+  font-size: 100px;
+  }
+
+.title:not(.is-spaced) + .subtitle {
+  font-size: 60px;
+  }
+
+.button.is-black {
+  height: 100px;
+  width: 400px;
+  font-size: 50px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+// House-sorting page 
+
+.hero.sortinghat.is-fullheight {
+  background-image: url('../images/hogwarts.jpg');
+  background-position: center;
+}
+
+div.section {
+overflow: hidden;
+}
+
+#housebuttons {
+  font-size: 40px;
+  width: 750px;
+  height: 100px
+}
+
+// Spells spage 
+
+.hero.is-fullheight {
+background-position: center;
+background-repeat:no-repeat;
+}
+
+#search-input {
+width: 700px;
+height: 120px;
+margin: 0 auto;
+font-size: 50px;
+}
+
+select {
+  display: none;
+}
+// html {
+//   height: 350%;
+// }
+#searchspells {
+margin: 30px auto;
+}
+
+div.section.background {
+  margin: 10px;
+  padding: 20px;
+  height: 5000px;
+}
+// Individual spell page 
+
+.single-spell.hero {
+  background-image: url('../images/the-forbidden-forest.jpg');
+  background-position: center;
+  background-color: black;
+}
+
+.single-spell.card-content {
+  // margin-top: 600px;
+  // display: block;
+  // opacity: 20%;
+  font-size: 50px;
+  background-color: black;
+}
+
+#spellsreturn-button {
+width: 700px;
+height: 100px;
+padding: 10px;
+}
+
+// individual character page 
+
+#subtitle {
+font-size: 40px;
+}
+
+#largersubtitle {
+  font-size: 50px;
+}
+
+#returntocharacters {
+  width: 710px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+// hogwarts history pages
+
+div.founders.hero.is-fullheight {
+  background-image: url('https://i.imgur.com/qOYBqgz.jpg');
+  background-size: auto;
+  height: 500px;
+}
+
+// #founders-height {
+//   height: 300%;
+//   overflow: hidden;
+// }
+
+// #paragraphs {
+//   font-size: 50px;
+// }
+
+// #smallerparagraphs {
+//   font-size: 40px; 
+// }
+
+#housebutton {
+display: none;
+ }
+ 
+}
+
+
+// iPhone 6, 7, & 8 in portrait
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+
+// iPhone 6, 7, & 8 Plus in portrait
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+
 @import '~bulma'
+
+

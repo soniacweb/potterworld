@@ -47,7 +47,7 @@ class SpellCard extends React.Component {
           </div>
         </main>
         <Link to="/spells">
-          <div className="box has-text-centered button is-black center">
+          <div id="spellsreturn-button" className="box has-text-centered button is-black center">
                             Return to Spells
           </div>
         </Link>
