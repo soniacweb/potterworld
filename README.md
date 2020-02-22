@@ -82,7 +82,7 @@ In order to request the correct data, it was important to read through the Harry
 ## Rendering
 
 
-For the `HOUSE HISTORY` and SPELLS page, the JSON api response we erre getting back was an object in an array- therefore we needed to add [0] to the dot notation first to access the data from the object and render is successfully:
+For the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we erre getting back was an object in an array- therefore we needed to add [0] to the dot notation first to access the data from the object and render is successfully:
 
 ```
  <p className="house title">School: {this.state.househistory[0].school}</p>
