@@ -30,32 +30,51 @@ class HouseSort extends React.Component {
               <div className="image is-2by1">
                 <p className="title has-text-white has-text-centered title is-2  has-text-weight-bold" >Home</p>
                 <p className="subtitle has-text-centered "></p>
-                <Link to="/house" >
-                  <div className="box has-text-centered button is-black center " onClick={() => {
-                    if (this.state.house === 'Syltherin') {
-                      console.log('is Syltherin')
-                    } else if (this.state.house === 'Ravenclaw') {
-                      console.log('is Ravenclaw')
-                    } else if (this.state.house === 'Griffindor') {
-                      console.log('is Griffindor')
-                    } else {
-                      console.log('is Hufflepuff')
-                    }
-                  }}>
+               
+                <div className="floating2">
+                  <div className="tossing2"> 
+                    <Link to="/house" >
+                      <div className="box has-text-centered button is-black center " onClick={() => {
+                        if (this.state.house === 'Syltherin') {
+                          console.log('is Syltherin')
+                        } else if (this.state.house === 'Ravenclaw') {
+                          console.log('is Ravenclaw')
+                        } else if (this.state.house === 'Griffindor') {
+                          console.log('is Griffindor')
+                        } else {
+                          console.log('is Hufflepuff')
+                        }
+                      }}>
                                     Sorting Hat
+                      </div>
+                    </Link>
                   </div>
-                </Link>
+                </div>
                 {/* <div id="blackbackground" className="section"> */}
-                <Link className="column" to="/houses">
-                  <div id="housebuttons" className="box has-text-centered button is-black center ">Hogwarts Houses- A History</div>
-                </Link>
-                <Link className="column" to="/Characters">
-                  <div id="housebuttons" className="box has-text-centered button is-black center ">Characters</div>
-                </Link>
-                <Link className="column" to="/spells">
-                  <div id="housebuttons" className="box has-text-centered button is-black center ">Spells</div>
-                </Link>
-                {/* </div> */}
+
+                <div className="floating">
+                  <div className="tossing"> 
+                    <Link className="column" to="/houses">
+                      <div id="housebuttons" className="box has-text-centered button is-black center ">Hogwarts Houses- A History</div>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="floating2">
+                  <div className="tossing2"> 
+                    <Link className="column" to="/Characters">
+                      <div id="housebuttons" className="box has-text-centered button is-black center ">Characters</div>
+                    </Link>
+                  </div>
+                </div>
+                
+                <div className="floating">
+                  <div className="tossing"> 
+                    <Link className="column" to="/spells">
+                      <div id="housebuttons" className="box has-text-centered button is-black center ">Spells</div>
+                    </Link>
+                  </div>
+                </div>
                 <div className="columns">
 
                 </div>

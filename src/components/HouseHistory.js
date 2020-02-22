@@ -64,11 +64,16 @@ class HouseHistory extends React.Component {
               }
             </div>
           </div>
-          <Link id="housebutton" to="/house">
-            <div className="box has-text-centered button is-black center">
+
+          <div className="floating2">
+            <div className="tossing2"> 
+              <Link id="housebutton" to="/house">
+                <div className="box has-text-centered button is-black center">
                           Return to house sort
+                </div>
+              </Link>
             </div>
-          </Link>
+          </div>
         </div>
       
       </div>

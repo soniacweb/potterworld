@@ -27,19 +27,24 @@ class SpellCard extends React.Component {
     console.log('spell', this.state.spell)
     console.log('spell detail', this.state.spell[0].spell)
     return (
+
       <section className="single-spell hero is-fullheight">
         <main role="main">
-          <div className="card has-text-centered is-wide">
-            <header className="card-header">
-              {/* <p>Header info</p> */}
-            </header>
+          <div className="floating">
+            <div className="tossing"> 
+              <div className="card has-text-centered is-wide">
+                <header className="card-header">
+                  {/* <p>Header info</p> */}
+                </header>
             
-            <div className="single-spell card-content">
-              <h1>Name: {this.state.spell[0].spell}</h1>
-              <p>Type: {this.state.spell[0].type}</p>
-              <h1>According to the world of witchcraft and wizardry, it {this.state.spell[0].effect}</h1>
+
+                <div className="single-spell card-content">
+                  <h1>Name: {this.state.spell[0].spell}</h1>
+                  <p>Type: {this.state.spell[0].type}</p>
+                  <h1>According to the world of witchcraft and wizardry, it {this.state.spell[0].effect}</h1>
+                </div>
+              </div>
             </div>
-          
       
             {/* <footer className="card-footer">
                             &copy; 2017 Footer info

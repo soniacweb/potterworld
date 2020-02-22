@@ -87,11 +87,16 @@ class CharacterCard extends React.Component {
 
         </div>
        
-        <Link to="/characters">
-          <div id="returntocharacters" className="box has-text-centered button is-black center">
+
+        <div className="floating2">
+          <div className="tossing2"> 
+            <Link to="/characters">
+              <div id="returntocharacters" className="box has-text-centered button is-black center">
                             Return to Characters
+              </div>
+            </Link>
           </div>
-        </Link>
+        </div>
       </section>
     )
   }

@@ -96,6 +96,7 @@ class Spells extends React.Component {
                   .map((spell, i) => {
                     return (
                       <div key={i} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                        
                         <Link to={`/spells/${spell._id}`}>
                           <div className="btn card has-background-black">
                             <div className="card-content">

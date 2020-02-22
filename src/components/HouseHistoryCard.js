@@ -79,11 +79,16 @@ class HouseHistoryCard extends React.Component {
             </article>
           </div>
         </div>
-        <Link to="/houses">
-          <div id="returntohistory" className="box has-text-centered button is-black center">
+
+        <div className="floating2">
+          <div className="tossing2"> 
+            <Link to="/houses">
+              <div id="returntohistory" className="box has-text-centered button is-black center">
                           Return to hogwarts history
+              </div>
+            </Link>
           </div>
-        </Link>
+        </div>
       </section>
     )
   }

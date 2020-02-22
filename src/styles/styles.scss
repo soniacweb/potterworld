@@ -108,9 +108,109 @@ div.founders.hero.is-fullheight {
 
 // *************** end animation ****************
 
+// Button animation
+
+
+.floating {  
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  // position: absolute;
+  // top: 0;
+  // left: -20%;
+}
+
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  55%  { transform: translate(0,15px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+.tossing {
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+  // height: 100px;
+  // margin-top: 40px;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction : alternate-reverse;
+  -webkit-animation-direction : alternate-reverse;
+
+
+}
+
+@keyframes tossing {
+0% {
+    transform: rotate(1.5deg);
+   
+}
+
+100% {
+  transform: rotate(-1.5deg);	
+}						
+    
+}
+
+
+// end animation
+
+
+// Button animation no2
+
+
+.floating2 {  
+  animation-name: floating2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  // position: absolute;
+  // top: 0;
+  // left: -20%;
+}
+
+
+@keyframes floating2 {
+  from { transform: translate(0,  0px); }
+  55%  { transform: translate(0,15px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+.tossing2 {
+  animation-name: tossing2;
+  -webkit-animation-name: tossing2;
+  // height: 100px;
+  // margin-top: 40px;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction : alternate-reverse;
+  -webkit-animation-direction : alternate-reverse;
+
+
+}
+
+@keyframes tossing2 {
+0% {
+    transform: rotate(-1.5deg);
+   
+}
+
+100% {
+  transform: rotate(1.5deg);	
+}						
+    
+}
+
+// end animation
+
 
 html, .section {
-  background-color: $body-background-color;
+  // background-color: $body-background-color;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;

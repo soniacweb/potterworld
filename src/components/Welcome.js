@@ -13,11 +13,15 @@ const Welcome = () => {
             <div className="image is-2by1">
               <p className="title has-text-centered title is-2 has-text-white has-text-weight-bold">Potterly</p>
               <p className="subtitle has-text-centered has-text-white">A place for Potterheads</p>
-              <Link to="/house">
-                <div className="box has-text-centered button is-black center">
+              <div className="floating">
+                <Link to="/house">
+                  <div className="tossing"> 
+                    <div className="box has-text-centered button is-black center">
                             Enter
-                </div>
-              </Link>
+                    </div>
+                  </div>
+                </Link>
+              </div>
 
             </div>
           </div>
