@@ -47,12 +47,12 @@ class HouseHistory extends React.Component {
               // })
                 .map((houses, i) => {
                   return (
-                    <div key={i} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                    <div id="house-card" key={i} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
                       <Link className="char-and-spells" to={`/houses/${houses._id}`}>
                         <div className="btn card has-background-black">
                           <div className="card-content">
                          
-                            <p className="has-text-white">{houses.name}</p>
+                            <p id="housename" className="has-text-white">{houses.name}</p>
                             {/* <p className="has-text-grey-darker">Type: {characters.house}</p> */}
                             {/* <p className="has-text-grey-darker">Effect: {characters.effect}</p> */}
                           </div>

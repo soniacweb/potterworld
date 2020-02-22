@@ -80,7 +80,7 @@ class HouseHistoryCard extends React.Component {
           </div>
         </div>
         <Link to="/houses">
-          <div className="box has-text-centered button is-black center">
+          <div id="returntohistory" className="box has-text-centered button is-black center">
                           Return to hogwarts history
           </div>
         </Link>
@@ -88,7 +88,5 @@ class HouseHistoryCard extends React.Component {
     )
   }
 }
-
-
 
 export default HouseHistoryCard

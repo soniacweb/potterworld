@@ -36,7 +36,7 @@ $body-background-color: black;
   background-size: cover;
 }
 .hero.sortinghat.is-fullheight {
-    background-image: url('../images/hogwarts.jpg');
+    background-image: url('https://i.imgur.com/8u699MV.jpg');
     background-size: cover;
 }
 
@@ -212,11 +212,16 @@ max-height: 5rem;
    padding: 10px;
   }
 
-  // spell cards 
+  // character card
 
-  // revealing letters 
+#largersubtitle {
+  margin-top: 50px;
+}
 
-// end animation 
+#first-subtitle {
+  margin-top: 50px;
+}
+   
 
 
 // ****** end animation******
@@ -304,18 +309,30 @@ article.tile.is-child-notification {
   background-color: black;
 }
 
+.spare-background {
+  opacity: 100%;
+}
+#character-card {
+  opacity: 100%;
+  position: relative;
+}
+
 .tile.is-vertical {
   background-color: black;
   opacity: 59%;
   color: white;
 }
 
+.tile.is-parent {
+// position: absolute;
+opacity: 95%;
+}
+
 .tile.is-child {
 background-color: black;
-opacity: 80%;
 color: white;
-
 }
+
 
 p.title {
   opacity: 100%;
@@ -343,9 +360,8 @@ h1.has-text-white {
 font-size: 25px;
 }
 
+
 // Ipad portrait and landscape
-
-
 
 @media only screen 
 and (min-device-width : 768px) 
@@ -367,8 +383,6 @@ and (max-device-width : 1024px)  {
     background-position: center;
   }
 
-  
-
   .single-spell.hero {
     background-image: url('../images/the-forbidden-forest.jpg');
     background-position: center;
@@ -380,6 +394,67 @@ and (max-device-width : 1024px)  {
     background-size: auto;
     height: 500px;
   }
+
+#character-card {
+width: 500px;
+height: 600px;
+  }
+
+#largersubtitle{
+  margin-top: 70px;
+}
+
+#largersubtitle2 {
+  margin-top: 30px; 
+}
+
+#house-card {
+  width: 230px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+#housename {
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+div.box.has-text-centered {
+  margin: 30px auto;
+}
+div.card-content {
+margin: 0 auto;
+}
+
+a.column {
+margin: 0px 0px;
+padding: 0px 0px;
+
+}
+
+#first-subtitle {
+margin-top: 80px;
+}
+div.returntocharacters.box {
+  margin-bottom: 100px;
+}
+
+// spells
+select {
+  display:block;
+}
+
+form.form {
+margin: 20px auto;
+padding: 5px;
+}
+
+#search-input {
+  width: 350px;
+  margin-bottom: 20px;
+  // padding: 20px 20px;
+}
+
 
 }
 
@@ -504,6 +579,11 @@ font-size: 40px;
   padding: 10px;
 }
 
+#character-card {
+  width: 550px;
+  height: 650px;
+}
+
 // hogwarts history pages
 
 div.founders.hero.is-fullheight {
@@ -525,10 +605,31 @@ div.founders.hero.is-fullheight {
 //   font-size: 40px; 
 // }
 
+#house-card {
+  width: 180px;
+  font-size: 13px;
+  margin: 0 auto;
+}
+
 #housebutton {
-display: none;
+// width: 130px;
+// font-size: 10px;
+margin: 0px auto;
+display: block;
  }
  
+//  individual house page 
+#returntohistory {
+  width: 760px;
+  font-size: 40px;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+p.subtitle {
+  font-size: 40px;
+  margin-top: 10px;
+}
 }
 
 
@@ -537,7 +638,174 @@ display: none;
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 667px) 
-and (orientation : portrait) { /* STYLES GO HERE */ }
+and (orientation : portrait) { 
+
+   // Welcome page 
+   .hero.welcome {
+    background-image: url('../images/hogwarts_background.jpg');
+    // background-size: cover;
+    background-position: center;
+  }
+
+
+  p.title.has-text-centered.is-2 {
+  font-size: 80px;
+  }
+
+  p.subtitle.has-text-centered {
+    font-size: 30px;
+    }
+.title:not(.is-spaced) + .subtitle {
+  font-size: 60px;
+  }
+
+.button.is-black {
+  height: 100px;
+  width: 450px;
+  font-size: 50px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+div.box.has-text-centered {
+margin: 30px auto;
+font-size: 35px;
+}
+// House-sorting page 
+
+.hero.sortinghat.is-fullheight {
+  background-image: url('../images/hogwarts.jpg');
+  background-position: center;
+}
+
+div.section {
+overflow: hidden;
+}
+
+#housebuttons {
+  font-size: 40px;
+  width: 750px;
+  height: 100px
+}
+
+// Spells spage 
+
+.hero.is-fullheight {
+background-position: center;
+background-repeat:no-repeat;
+}
+
+#search-input {
+width: 700px;
+height: 120px;
+margin: 0 auto;
+font-size: 50px;
+}
+
+select {
+  display: none;
+}
+// html {
+//   height: 350%;
+// }
+#searchspells {
+margin: 30px auto;
+}
+
+div.section.background {
+  margin: 10px;
+  padding: 20px;
+  height: 5000px;
+}
+// Individual spell page 
+
+.single-spell.hero {
+  background-image: url('../images/the-forbidden-forest.jpg');
+  background-position: center;
+  background-color: black;
+}
+
+.single-spell.card-content {
+  // margin-top: 600px;
+  // display: block;
+  // opacity: 20%;
+  font-size: 50px;
+  background-color: black;
+}
+
+#spellsreturn-button {
+width: 700px;
+height: 100px;
+padding: 10px;
+}
+
+// individual character page 
+
+#subtitle {
+font-size: 40px;
+}
+
+#largersubtitle {
+  font-size: 50px;
+}
+
+#returntocharacters {
+  width: 710px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#character-card {
+  position: relative;
+  opacity: 100%;
+  width: 550px;
+  height: 650px;
+}
+
+// hogwarts history pages
+
+div.founders.hero.is-fullheight {
+  background-image: url('https://i.imgur.com/qOYBqgz.jpg');
+  background-size: auto;
+  height: 500px;
+}
+
+
+
+#house-card {
+  display:flex;
+  justify-content: space-around;
+  overflow: hidden;
+  width: 210px;
+  font-size: 7px;
+  margin: -10px auto;
+}
+
+#housebutton {
+width: 150px;
+// font-size: 10px;
+margin: 0 auto;
+// display: block;
+ }
+ 
+//  individual house page 
+#returntohistory {
+  width: 760px;
+  font-size: 40px;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+// .btn {
+//   padding: 0px;
+// }
+
+p.subtitle {
+  font-size: 40px;
+  margin-top: 10px;
+}
+}
+
 
 
 // iPhone 6, 7, & 8 Plus in portrait
