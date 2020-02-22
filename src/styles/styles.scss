@@ -54,6 +54,18 @@ $body-background-color: black;
   // height: 200px;
 }
 
+// House page 
+
+p.title {
+  margin-top: 20px;
+}
+p.valueTag {
+  display: inline;
+}
+
+.fake.tile.is-child-notification {
+  height: 50px;
+}
 
 // character page 
 
@@ -513,6 +525,11 @@ height: 600px;
   margin: 10px auto;
   overflow: hidden;
 }
+
+// p.house-title {
+//   margin-top: 400px;
+// }
+
 
 #housename {
   font-size: 15px;

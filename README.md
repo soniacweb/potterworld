@@ -81,6 +81,34 @@ In order to request the correct data, it was important to read through the Harry
 
 ## Rendering
 
+
+For the `HOUSE HISTORY` and SPELLS page, the JSON api response we erre getting back was an object in an array- therefore we needed to add [0] to the dot notation first to access the data from the object and render is successfully:
+
+```
+ <p className="house title">School: {this.state.househistory[0].school}</p>
+                  <p>
+                    <div className="subtitle"> House values: 
+                      {this.state.househistory[0].values.map((value, i) => {
+                        return <p key={i}>{value}</p>
+                      })}
+                    </div>
+                  </p>
+                  <p className="subtitle">Head of house: {this.state.househistory[0].headOfHouse}</p>
+                  <article className="fake tile is-child notification">
+                    {/* school is overlapped by your nav bar, so it's not showing. Just to let you know ;) */}
+                  </article>
+                  <p className="title ">Mascot: {this.state.househistory[0].mascot}</p>
+                  {/* color is an array */}
+                  <div className="title">Colors:
+                    {this.state.househistory[0].colors.map((color, i) => {
+                      return <p key={i}>{color}</p>
+                    })}
+                  </div>  
+
+```
+
+I had to map through the 'values' and 'colors' key to list the values from the object in the array.
+
 ## Filtering and Search Features: Building a basic React.js form with no additional libraries
 
 For the Spells page, we have a filter form consisting of types of spells the user can read through and select. We also have a basic search funtionality too.
