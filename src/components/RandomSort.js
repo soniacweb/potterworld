@@ -2,85 +2,90 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-class RandomSort extends React.Component {
+
+class HouseSort extends React.Component {
   constructor() {
     super()
     this.state = {
-      randomsort: []
-      // query: '',
-      // // search: false,
-      // message: '',
-      // filter: '',
-      // filterType: 'All'
+      randomsort: ''
     }
   }
 
   componentDidMount() {
     axios.get('https://www.potterapi.com/v1/sortingHat')
-      .then(res => this.setState({ randomsort: res.data }))
+      .then(res => this.setState({
+        randomsort: res.data
+      }))
   }
 
 
-  filter(e) {
-    this.setState({ filter: e.target.value })
-  }
-
-
-  typeFilter(e) {
-    e.preventDefault()
-    this.setState({
-      filterType: e.target.value
-    })
-    console.log('TESSSSSTTTTYYY',this.state.filterType)
-   
-  }
 
   render() {
-    // const { query } = this.state
     console.log(this.state.randomsort)
-    console.log('state value',this.state.filter)
-    // console.log(this.state.search)
-    const items = [...this.state.randomsort]
-    // console.log("items",items)
-    // if (this.state.filter) {
-    //     items = items.filter(item =>
-    //         item.spell.toLowerCase()
-    //             .includes(this.state.filter.toLocaleLowerCase()))
-    // } 
-
-    // console.log("mess",this.state.spells[1].spell)
-        
     return (
-    // <h1>hello</h1>
       <div className="fade-in"> 
-        <section>
-          <div className="hero is-fullheight"></div>
-          <div className="section background">
-           
+        <section className="after-sorting hero is-fullheight">
+          <div className="hero-body">
+            <div className="container">
+              <div className="image is-2by1">
 
-                        <Link to={`/sortinghat/${randomsort._id}`}>
-                          <div className="btn card has-background-black">
-                            <div className="card-content">
-                              <h1 className="has-text-white">{randomsort.house}</h1>
-                              {/* {console.log(spell.spell)} */}
-                              {/* <p className="has-text-white">A {spell.type}</p> */}
-                              {/* <p className="has-text-white">Effect: {spell.effect}</p> */}
-                            </div>
-                          </div>
-                        </Link>
+               
+                <p className="subtitle has-text-white has-text-centered title is-3" >Congratulations! The magical Sorting Hat has determined you are in house {this.state.randomsort}!</p>
+                <p className="subtitle has-text-centered "></p>
+                
+              
+                
+                <div className="floating2">
+                  <div className="tossing2"> 
+                    {/* <Link>
+                      <div className="house-box has-text-centered button is-black center " >
+                        {this.state.randomsort}
                       </div>
-                    )
-                  })
-                }
-            
-            {/* </div>
-          </div> */}
+                    </Link> */}
+                  </div>
+                </div>
+
+                <div className="floating">
+                  <div className="tossing"> 
+                    <Link to="/house" >
+                      <div className="house-box has-text-centered button is-black center " 
+                        // () => {
+                        // if (this.state.house === 'Syltherin') {
+                        //   console.log('is Syltherin')
+                        // } else if (this.state.house === 'Ravenclaw') {
+                        //   console.log('is Ravenclaw')
+                        // } else if (this.state.house === 'Griffindor') {
+                        //   console.log('is Griffindor')
+                        // } else {
+                        //   console.log('is Hufflepuff')
+                        // }
+                      // }
+                      >
+                        Go Again!
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                <div id="blackbackground" className="section">
+
+                  <article id="house-image" className="tile is-child notification">
+                    <figure className="house-image">
+                      <img id="house-image" src="https://i.imgur.com/0NALdmf.png" />
+                    </figure>
+                  </article>
+                </div>
+
+                <div className="columns">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
         </section>
-       </div>
-//     )
-//   }
+      </div>
+    ) 
+  }
+}
 
-
-
-
-export default RandomSort
+export default HouseSort

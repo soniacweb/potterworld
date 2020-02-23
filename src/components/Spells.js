@@ -56,6 +56,15 @@ class Spells extends React.Component {
         <section>
           <div className="hero is-fullheight"></div>
           <div className="section background">
+
+            <div className="floating">
+              <div className="tossing"> 
+                <Link className="column" to="/house">
+                  <div id="housebuttons" className="box has-text-centered button is-black center ">Return to Homepage </div>
+                </Link>
+              </div>
+            </div>
+        
             <form className="form" >
               {/* <form className="form" onClick={(e) => this.handleFilter(e)}> */}
               <select onChange={(e) => this.typeFilter(e)}>

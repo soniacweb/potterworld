@@ -43,9 +43,17 @@ Be deployed online and accessible to the public.
 - GitHub
 - Mockplus
 
-# Wireframing- Mockups
+# Wireframing- Mockups Architecture
 
-Our app has 5 main pages: Welcome, Characters, Spells, Hogwarts- A History, and House Sorting.
+Our app comprises of 5 main pages: Welcome, House Sorting, Characters, Spells, and Hogwarts- A History.
+
+`Welcome` page: the user can enter by selecting the button to direct them to the house Sorting Page with more options.
+
+Within `House Sorting`, there are 4 options the user can select: House Sorting, Characters, Spells, and Hogwarts- A History.
+
+`House Sorting` is a feature we are still working on- where the API provides random allocatiobn of house, we wanted to construct a quiz to then 'sort' the user into a house. 
+
+The `Characters` page, when clicked, the user is taken to an index page listing all of the characers known in the fantasy world JK Rowling's created for Harry Potter franchise. If any of the character cards are clicked on, the user is directed to a `single character` index page, listing further information about the character. 
 
 The general design was fun and interesting to create. We decided to use Bulma fullheight hero images to bring our mockups to life, with the general theme for users to navigate using buttons at the bottom. We also added a responsive navbar fopr mobile.
 
@@ -82,7 +90,9 @@ In order to request the correct data, it was important to read through the Harry
 ## Rendering
 
 
-For the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we erre getting back was an object in an array- therefore we needed to add [0] to the dot notation first to access the data from the object and render is successfully:
+
+
+For the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we were receiving back was an object in an array- therefore we needed to add [0] to the dot notation first to access the data from the object and render is successfully. The below is an excerpt of this:
 
 ```
  <p className="house title">School: {this.state.househistory[0].school}</p>
@@ -107,7 +117,7 @@ For the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we erre getting
 
 ```
 
-I had to map through the 'values' and 'colors' key to list the values from the object in the array.
+We had to map through the 'values' and 'colors' key to list the values from the object in the array.
 
 ## Filtering and Search Features: Building a basic React.js form with no additional libraries
 
@@ -170,7 +180,7 @@ We used the controlled method, where a controlled input value is directly tracke
 
 ```
 
-We accessed spells, and 'types' from `this.state`. 
+We accessed spells, and 'types' from `this.state` syntax. 
 
 # Wins
 - I like the overall look of the app. We wanted to stick with old-school looking illustrations, a nod to the books rather than the movies. 

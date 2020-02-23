@@ -27,10 +27,14 @@ $body-background-color: black;
 }
 
 .single-househistory.hero {
-  background-image: url('https://i.imgur.com/DSOSbiG.jpg');
-  background-size: cover;
+background-image: url('https://i.imgur.com/CPfky3p.jpg');
+ background-size: repeat;
 }
 
+.after-sorting.hero {
+  background-image: url('https://i.imgur.com/UEHaM0r.png');
+  background-size: center;
+}
 .hero.welcome {
   background-image: url('../images/hogwarts_background.jpg');
   background-size: cover;
@@ -385,6 +389,18 @@ footer.card-footer {
     color: white;
   }
 
+  // images 
+
+.house-image {
+  margin: 20px auto;
+  width: 810px;
+  height: 290px;
+}
+
+// .house-box {
+//   margin: 100px auto;
+// }
+
   // forms and search bars
 
   form.form {
@@ -416,6 +432,13 @@ footer.card-footer {
     width: 350px;
   }
 
+#hallfoffame {
+  font-size: 70px;
+}
+
+#housetitle {
+  font-size: 50px;
+}
 
 article.tile.is-child-notification {
   background-color: black;
@@ -424,10 +447,10 @@ article.tile.is-child-notification {
 .spare-background {
   opacity: 100%;
 }
-#character-card {
-  opacity: 100%;
-  position: relative;
-}
+// #character-card {
+//   opacity: 100%;
+//   position: relative;
+// }
 
 .tile.is-vertical {
   background-color: black;
@@ -437,8 +460,13 @@ article.tile.is-child-notification {
 
 .tile.is-parent {
 // position: absolute;
-opacity: 95%;
+opacity: 90%;
 }
+
+// article.character.tile.is-children {
+//   // position: absolute;
+//   opacity: 85%;
+//   }
 
 .tile.is-child {
 background-color: black;
@@ -526,6 +554,10 @@ height: 600px;
   overflow: hidden;
 }
 
+#house-image {
+  display: none;
+  }
+
 // p.house-title {
 //   margin-top: 400px;
 // }
@@ -572,6 +604,9 @@ padding: 5px;
   // padding: 20px 20px;
 }
 
+#housetitle {
+  font-size: 36px;
+}
 
 }
 
@@ -629,6 +664,9 @@ overflow: hidden;
   height: 100px
 }
 
+#house-image {
+display: none;
+}
 // Spells spage 
 
 .hero.is-fullheight {
@@ -747,6 +785,12 @@ p.subtitle {
   font-size: 40px;
   margin-top: 10px;
 }
+
+// individual hogwarts house page 
+
+#halloffamers {
+  font-size: 30px;
+}
 }
 
 
@@ -856,6 +900,10 @@ height: 100px;
 padding: 10px;
 }
 
+#house-image {
+  display: none;
+  }
+
 // individual character page 
 
 #subtitle {
@@ -887,7 +935,9 @@ div.founders.hero.is-fullheight {
   height: 500px;
 }
 
-
+#halloffamers {
+  font-size: 30px;
+}
 
 #house-card {
   display:flex;
@@ -913,6 +963,9 @@ margin: 0 auto;
   padding: 5px;
 }
 
+#housetitle {
+  font-size: 35px;
+}
 // .btn {
 //   padding: 0px;
 // }
@@ -930,7 +983,24 @@ p.subtitle {
 @media only screen 
 and (min-device-width : 414px) 
 and (max-device-width : 736px) 
-and (orientation : portrait) { /* STYLES GO HERE */ }
+and (orientation : portrait) { 
+
+#house-image {
+  display: none;
+  }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+  #house-image {
+    display: none;
+    }
+
+
+
+}
+
 
 
 @import '~bulma'

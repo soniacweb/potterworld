@@ -7,21 +7,21 @@ class HouseSort extends React.Component {
   constructor() {
     super()
     this.state = {
-      house: ''
+      randomsort: ''
     }
   }
 
   componentDidMount() {
     axios.get('https://www.potterapi.com/v1/sortingHat')
       .then(res => this.setState({
-        house: res.data
+        randomsort: res.data
       }))
   }
 
 
 
   render() {
-    console.log(this.state.house)
+    console.log(this.state.randomsort)
     return (
       <div className="fade-in"> 
         <section className="hero sortinghat is-fullheight">
@@ -33,18 +33,20 @@ class HouseSort extends React.Component {
                
                 <div className="floating2">
                   <div className="tossing2"> 
-                    <Link to="/house" >
-                      <div className="box has-text-centered button is-black center " onClick={() => {
-                        if (this.state.house === 'Syltherin') {
-                          console.log('is Syltherin')
-                        } else if (this.state.house === 'Ravenclaw') {
-                          console.log('is Ravenclaw')
-                        } else if (this.state.house === 'Griffindor') {
-                          console.log('is Griffindor')
-                        } else {
-                          console.log('is Hufflepuff')
-                        }
-                      }}>
+                    <Link to="/sortinghat" >
+                      <div className="box has-text-centered button is-black center " 
+                        // () => {
+                        // if (this.state.house === 'Syltherin') {
+                        //   console.log('is Syltherin')
+                        // } else if (this.state.house === 'Ravenclaw') {
+                        //   console.log('is Ravenclaw')
+                        // } else if (this.state.house === 'Griffindor') {
+                        //   console.log('is Griffindor')
+                        // } else {
+                        //   console.log('is Hufflepuff')
+                        // }
+                      // }
+                      >
                                     Sorting Hat
                       </div>
                     </Link>
@@ -84,7 +86,7 @@ class HouseSort extends React.Component {
           </div>
         </section>
       </div>
-    )
+    ) 
   }
 }
 

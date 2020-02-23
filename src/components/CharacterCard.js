@@ -63,18 +63,18 @@ class CharacterCard extends React.Component {
             </div>
           </div>
           <div className="tile is-parent">
-            <article className="tile is-child notification">
+            <article className="character tile is-child notification">
               <div className="content">
                 <p id="largersubtitle" className="title">{this.state.character.name}</p>
                 {/* if statement to return no known aliass */}
-                <p id="subtitle" className="title">{this.state.character.house}</p>
+                <p id="subtitle" className="title"> {this.state.character.house} House </p>
                 <div className="content">
                   <div className="tile is-parent">
                     <article className="spare-background tile is-child notification">
                       <figure className="image is-4by4">
                         <img id="character-card" src="https://i.imgur.com/vbPeNlI.jpg" />
                         <p id="largersubtitle2" className="subtitle">The famous Wand-Maker, Olivander, Recommends: {this.state.character.wand} for {this.state.character.name} </p>
-                        <p id="largersubtitle" className="subtitle">When {this.state.character.name} first encountered a Boggart, their worst fears were revealed, and they saw a.. {this.state.character.boggart}!</p>
+                        <p id="largersubtitle" className="subtitle">A boggart takes the form of your worst fears. When {this.state.character.name} first encountered one, the Boggart revealed (a).. {this.state.character.boggart}</p>
                  
                       </figure>
                     </article>

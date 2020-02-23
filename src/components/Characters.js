@@ -73,8 +73,18 @@ class Characters extends React.Component {
         <div className="section">
           <div className="character hero is-fullheight"></div>
         </div>
+
+
+        <div className="floating">
+          <div className="tossing"> 
+            <Link className="column" to="/house">
+              <div id="housebuttons" className="box has-text-centered button is-black center ">Return to Homepage </div>
+            </Link>
+          </div>
+        </div>
+                
         <form className="form" >
-          <select onChange={(e) => this.bloodFilter(e)}>
+          {/* <select onChange={(e) => this.bloodFilter(e)}>
             <option value="All">All</option>
             <option value="pure-blood">Pure-blood</option>
             <option value="half-blood">Half-blood</option>
@@ -105,7 +115,7 @@ class Characters extends React.Component {
             <option value="All">All</option>
             <option value="true">Yes</option>
             <option value="false">No</option>
-          </select>
+          </select> */}
           <input
             type="text"
             // value={query}

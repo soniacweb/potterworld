@@ -22,6 +22,7 @@ import HouseHistory from './components/HouseHistory'
 import HouseHistoryCard from './components/HouseHistoryCard'
 import Characters from './components/Characters'
 import CharacterCard from './components/CharacterCard'
+import RandomSort from './components/RandomSort'
 
 const App = () => (
   <BrowserRouter>
@@ -30,6 +31,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={Welcome} />
       <Route exact path="/house" component={HouseSort} />
+      <Route exact path="/sortinghat" component={RandomSort} />
       <Route exact path="/spells/" component={Spells} />
       <Route exact path="/spells/:id" component={SpellCard} />
       <Route exact path="/characters/:id" component={CharacterCard} />
