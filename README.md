@@ -47,9 +47,9 @@ Be deployed online and accessible to the public.
 
 Our app comprises of 5 main pages: Welcome, House Sorting, Characters, Spells, and Hogwarts- A History.
 
-`Welcome` page: the user can enter by selecting the button to direct them to the house Sorting Page with more options.
+`Welcome` page: the user can enter by selecting the button to direct them to the `House Sorting` page with more options.
 
-Within `House Sorting`, there are 4 options the user can select: House Sorting, Characters, Spells, and Hogwarts- A History.
+Within `House Sorting`, there are 4 options the user can select: `House Sorting`, `Characters`, `Spells`, and `Hogwarts- A History`.
 
 `House Sorting` is a feature we are still working on- where the API provides random allocatiobn of house, we wanted to construct a quiz to then 'sort' the user into a house. 
 
@@ -91,7 +91,7 @@ In order to request the correct data, it was important to read through the Harry
 
 ## Rendering
 
-Below is an excerpt of code from the Sorting Hat page, built using a classical React component.
+Below is an excerpt of code from the `Sorting Hat` page, built using a classical React component.
 
 ```
 class HouseSort extends React.Component {
@@ -150,8 +150,6 @@ Classical React components were used- 2 seperate get requests were needed to fet
 
 In `Characters`, Name, School, House, Boggart form, and Wand information are available- accessed by keys. In `Spells`, the type and definition of use are available.
 
-
-
 This was achieved for the `Character` page as per the below code snippet example:
 
 ```
@@ -204,7 +202,7 @@ Spells Page:
 
 <img src="https://i.imgur.com/fQwAuaP.png" style="400px margin: 0 auto;" />
 
-Character Page: 
+Characters Page: 
 
 <img src="https://i.imgur.com/FdMSGui.png" style="400px margin: 0 auto;" />
 
@@ -305,14 +303,13 @@ We used the controlled method, where a controlled input value is directly tracke
 
 ```
 
-We accessed spells, and 'types' from `this.state` syntax. 
 
 Individual `Character`, `Spells`, and `House History` pages also required a classical React component that displayed each character/spell/house history by their unique ID key. This allows the user to view more information about the respective subjects that they have clicked on the `House Sort` index page. 
 
 
 # Wins
 
-- My biggest win was incorporating the `Sorting Hat` page for the novelty of it all.
+- My biggest win was incorporating the `Sorting Hat` feature page for the novelty of it all.
 
 - I like the overall look of the app. We wanted to stick with old-school looking illustrations, a nod to the books rather than the movies. 
 
