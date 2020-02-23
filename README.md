@@ -55,6 +55,8 @@ Within `House Sorting`, there are 4 options the user can select: House Sorting, 
 
 The `Characters` page, when clicked, the user is taken to an index page listing all of the characers known in the fantasy world JK Rowling's created for Harry Potter franchise. If any of the character cards are clicked on, the user is directed to a `single character` index page, listing further information about the character. 
 
+`House Sorting` The button labelled `House Sorting` is a main feature we really wanted to incorporate. When clicked the user is directed to a 'sorting hat' page where it displays a randomly chosen house the user is allocated into. We do this random allocation from the response we get back each time we fetch from the API.
+
 The general design was fun and interesting to create. We decided to use Bulma fullheight hero images to bring our mockups to life, with the general theme for users to navigate using buttons at the bottom. We also added a responsive navbar fopr mobile.
 
 ### Welcome Page
@@ -89,10 +91,125 @@ In order to request the correct data, it was important to read through the Harry
 
 ## Rendering
 
+Below is an excerpt of code from the Sorting Hat page, built using a classical React component.
+
+```
+class HouseSort extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      randomsort: ''
+    }
+  }
+
+  componentDidMount() {
+    axios.get('https://www.potterapi.com/v1/sortingHat')
+      .then(res => this.setState({
+        randomsort: res.data
+      }))
+  }
 
 
 
-For the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we were receiving back was an object in an array- therefore we needed to add [0] to the dot notation first to access the data from the object and render is successfully. The below is an excerpt of this:
+  render() {
+    console.log(this.state.randomsort)
+    return (
+      <div className="fade-in"> 
+        <section className="after-sorting hero is-fullheight">
+          <div className="hero-body">
+            <div className="container">
+              <div className="image is-2by1">
+
+               
+                <p className="subtitle has-text-white has-text-centered title is-3" >Congratulations! The magical Sorting Hat has determined you are in {this.state.randomsort} house!</p>
+                <p className="subtitle has-text-centered "></p>
+                
+                <div className="floating2">
+                  <div className="tossing2"> 
+                   </div>
+                </div>
+
+                <div className="floating">
+                  <div className="tossing"> 
+                    <Link to="/house" >
+                      <div className="house-box has-text-centered button is-black center ">
+                        Go Again!
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
+```
+And below is the overall page design the user will see once 'sorted'- excluding the hero image: 
+
+<img src="https://i.imgur.com/JwrZMde.png" style="400px margin: 0 auto;" />
+
+### Character and Spells Page 
+
+Classical React components were used- 2 seperate get requests were needed to fetch data from the API using different endpoints for these two pages. These pages had similar formats in information fetching. Another classical React component using a map function was utilised to list and display every character featured on the API. The user is first directed to `Characters` or `Spells`- once in, a list of spells or characters are displayed. The user is able to click on any to discover further information, directing them to a seperate page for each item. There, the pages display information about the characters and different types of spells that the user has selected from the `Characters` and `Spells` pages. 
+
+In `Characters`, Name, School, House, Boggart form, and Wand information are available- accessed by keys. In `Spells`, the type and definition of use are available.
+
+
+
+This was achieved for the `Character` page as per the below code snippet example:
+
+```
+
+  componentDidMount() {
+    axios.get('https://www.potterapi.com/v1/characters/?key=XXXX')
+      .then(res => this.setState({ characters: res.data }))
+  }
+
+  render() {
+
+    console.log('hell')
+    console.log(this.state.characters)
+    console.log(this.state.filter)
+    return (
+    // <h1>hello</h1>
+      <div className="fade-in">
+        <div className="section">
+          <div className="character hero is-fullheight"></div>
+        </div>
+
+
+        <div className="floating">
+          <div className="tossing"> 
+            <Link className="column" to="/house">
+              <div id="housebuttons" className="box has-text-centered button is-black center ">Return to Homepage </div>
+            </Link>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="columns is-mobile is-multiline">
+            {this.state.characters
+
+             .filter(elem => {
+                return elem.name.toLowerCase().includes(this.state.filter.toLowerCase())
+              })
+              .map((characters, i) => {
+                return (
+                  <div key={i} className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                    <Link className="char-and-spells" to={`/characters/${characters._id}`}>
+                      <div className="btn card has-background-black">
+                        <div className="card-content">
+                          <p className="has-text-white">{characters.name}</p>
+                  
+
+```
+
+Spells Page: 
+
+<img src="https://i.imgur.com/fQwAuaP.png" style="400px margin: 0 auto;" />
+
+Character Page: 
+
+<img src="https://i.imgur.com/FdMSGui.png" style="400px margin: 0 auto;" />
+
+To add on a seperate note, for the `HOUSE HISTORY` and `SPELLS` page, the JSON api responsewe were receiving back was an object in an array- something I hadn't personally experienced as of yet. We were required to add `[0]` to the dot notation to access the data from the object and render is successfully. The below is an excerpt is an example of this of this:
+
 
 ```
  <p className="house title">School: {this.state.househistory[0].school}</p>
@@ -105,7 +222,6 @@ For the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we were receivi
                   </p>
                   <p className="subtitle">Head of house: {this.state.househistory[0].headOfHouse}</p>
                   <article className="fake tile is-child notification">
-                    {/* school is overlapped by your nav bar, so it's not showing. Just to let you know ;) */}
                   </article>
                   <p className="title ">Mascot: {this.state.househistory[0].mascot}</p>
                   {/* color is an array */}
@@ -117,7 +233,14 @@ For the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we were receivi
 
 ```
 
-We had to map through the 'values' and 'colors' key to list the values from the object in the array.
+NB: We also had to map through the 'values' and 'colors' key to list the values from the object in the array.
+
+View of the character page: 
+
+<img src="https://i.imgur.com/AekyEsV.png" style="400px margin: 0 auto;" />
+<img src="https://i.imgur.com/w7mizoa.png" style="400px margin: 0 auto;" />
+
+
 
 ## Filtering and Search Features: Building a basic React.js form with no additional libraries
 
@@ -125,6 +248,8 @@ For the Spells page, we have a filter form consisting of types of spells the use
 
 A ‘spells from’ input box, which is an input of type text.
 A ‘spells’ select list, which will display a unique list of spells based on the API's listing.
+
+The code below is a short excerpt of this: 
 
 ```
 filter(e) {
@@ -182,7 +307,13 @@ We used the controlled method, where a controlled input value is directly tracke
 
 We accessed spells, and 'types' from `this.state` syntax. 
 
+Individual `Character`, `Spells`, and `House History` pages also required a classical React component that displayed each character/spell/house history by their unique ID key. This allows the user to view more information about the respective subjects that they have clicked on the `House Sort` index page. 
+
+
 # Wins
+
+- My biggest win was incorporating the `Sorting Hat` page for th novelty of it.
+
 - I like the overall look of the app. We wanted to stick with old-school looking illustrations, a nod to the books rather than the movies. 
 
 - Retrieving different types of data from the API and exploring it using different combination of urls. The excercise helped me better understand how APIs work. Explored the use of Bulma, and CSS animation combination.
