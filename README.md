@@ -45,17 +45,15 @@ Be deployed online and accessible to the public.
 
 # Wireframing- Mockups Architecture
 
-Our app comprises of 5 main pages: Welcome, House Sorting, Characters, Spells, and Hogwarts- A History.
+Our app comprises of 5 main pages: Welcome, `House Sorting, Characters, Spells, and Hogwarts- A History.`
 
 `Welcome` page: the user can enter by selecting the button to direct them to the `House Sorting` page with more options.
 
 Within `House Sorting`, there are 4 options the user can select: `House Sorting`, `Characters`, `Spells`, and `Hogwarts- A History`.
 
-`House Sorting` is a feature we are still working on- where the API provides random allocatiobn of house, we wanted to construct a quiz to then 'sort' the user into a house. 
+The `Characters` page: When clicked, the user is taken to an index page listing all of the characers known in the fantasy world JK Rowling's created for the Harry Potter franchise. If any of the character cards are clicked on, the user is directed to a `single character` index page, listing further information about the character. 
 
-The `Characters` page, when clicked, the user is taken to an index page listing all of the characers known in the fantasy world JK Rowling's created for Harry Potter franchise. If any of the character cards are clicked on, the user is directed to a `single character` index page, listing further information about the character. 
-
-`House Sorting` The button labelled `House Sorting` is a main feature we really wanted to incorporate. When clicked the user is directed to a 'sorting hat' page where it displays a randomly chosen house the user is allocated into. We do this random allocation from the response we get back each time we fetch from the API.
+`House Sorting`: The button labelled `House Sorting` is a main feature we really wanted to incorporate. When clicked the user is directed to a 'sorting hat' page where it displays a randomly chosen house the user is allocated into. We fetch the random allocation from the response we recieve back each time from the API.
 
 The general design was fun and interesting to create. We decided to use Bulma fullheight hero images to bring our mockups to life, with the general theme for users to navigate using buttons at the bottom. We also added a responsive navbar fopr mobile.
 
@@ -206,7 +204,7 @@ Characters Page:
 
 <img src="https://i.imgur.com/FdMSGui.png" style="400px margin: 0 auto;" />
 
-To add on a seperate note, for the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we were receiving back was an object in an array- something I hadn't personally experienced as of yet. We were required to add `[0]` to the dot notation to access the data from the object and render is successfully. The below is an excerpt is an example of this of this:
+To add on a seperate note, for the `HOUSE HISTORY` and `SPELLS` page, the JSON API response we were receiving back was an object in an array- something I hadn't personally experienced. We were required to add `[0]` to the dot notation to access the data from the object and render is successfully. The below is an excerpt is an example of this:
 
 
 ```
@@ -244,8 +242,7 @@ View of the character page:
 
 For the Spells page, we have a filter form consisting of types of spells the user can read through and select. We also have a basic search funtionality too.
 
-A ‘spells from’ input box, which is an input of type text.
-A ‘spells’ select list, which will display a unique list of spells based on the API's listing.
+We used a `spells` from input box, which includes an input of type text, and a `spells` select list, which will display a unique list of spells based on the API's listing.
 
 The code below is a short excerpt of this: 
 
@@ -264,7 +261,7 @@ filter(e) {
   }
 ```
 
-We needed to capture the users input for each of the ‘spells form’ and its respective fields, and there are two approaches in React.js to achieve that- Controlled components vs Uncontrolled components.
+We needed to capture the user's input for each of the `spells form` and its respective fields, and there are two approaches in React.js to achieve that- Controlled components vs Uncontrolled components.
 
 We used the controlled method, where a controlled input value is directly tracked and set/updated by React. The value for each input in a form is stored in local state and updated by calling `{this.filter.bind(this)}` from the onChange event handler.
 
@@ -317,13 +314,13 @@ Individual `Character`, `Spells`, and `House History` pages also required a clas
 
 
 # Challenges  
-We had initially only spent just over a week on React before getting assigned a 2-day project. Out dreams were a tad on the ambitious side, and soon realised we couldn't get the design polished up in time. Wel also realised too late in the day, the images weren't unfortunately sufficiant for this app to take inspiration from to the Wizarding World app, so we therefore needed to improvise with the design.
+We had initially only spent just over a week on React before getting assigned a 2-day project. Out dreams were a tad on the ambitious side, and soon realised we couldn't get the design polished up in time. We also realised too late in the day, the images from the API weren't unfortunately sufficiant for this app to take inspiration from to the Wizarding World app, so we therefore needed to improvise with the design.
 
 # Key Learnings
 
 While working on the project, I had to refer to the React documentation a great deal, read, learn, and code at the same time. It was challenging  to provide a completely finished app, but I'm happy Cuong and I could continue working on it after the deadline, in our spare time. 
 
-I learned a lot about pair programming through this exercise. We had a lot of fun working together but it really highlighted to me how a different pace of learning in combination with working towards a strict 2-day deadline, can impact the workflow. It inspired me to want to explore React further after the exercise!
+I learned a lot about pair programming through this exercise. We had a lot of fun working together but it really highlighted to me how a different pace of learning, in combination with working towards a strict 2-day deadline, can impact the workflow. It inspired me to want to explore React further after the exercise!
 
 # Future Features
 
