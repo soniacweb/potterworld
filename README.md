@@ -26,8 +26,8 @@ Have a visually impressive design
 Be deployed online and accessible to the public.
 
 ## Timeframe
-2 days - v1
-5 days - v2
+2 days - v1 - not deployed
+4 days - v2 - 
 
 # Technologies used
 - HTML5
@@ -208,7 +208,7 @@ Character Page:
 
 <img src="https://i.imgur.com/FdMSGui.png" style="400px margin: 0 auto;" />
 
-To add on a seperate note, for the `HOUSE HISTORY` and `SPELLS` page, the JSON api responsewe were receiving back was an object in an array- something I hadn't personally experienced as of yet. We were required to add `[0]` to the dot notation to access the data from the object and render is successfully. The below is an excerpt is an example of this of this:
+To add on a seperate note, for the `HOUSE HISTORY` and `SPELLS` page, the JSON api response we were receiving back was an object in an array- something I hadn't personally experienced as of yet. We were required to add `[0]` to the dot notation to access the data from the object and render is successfully. The below is an excerpt is an example of this of this:
 
 
 ```
@@ -312,12 +312,11 @@ Individual `Character`, `Spells`, and `House History` pages also required a clas
 
 # Wins
 
-- My biggest win was incorporating the `Sorting Hat` page for th novelty of it.
+- My biggest win was incorporating the `Sorting Hat` page for the novelty of it all.
 
 - I like the overall look of the app. We wanted to stick with old-school looking illustrations, a nod to the books rather than the movies. 
 
 - Retrieving different types of data from the API and exploring it using different combination of urls. The excercise helped me better understand how APIs work. Explored the use of Bulma, and CSS animation combination.
-
 
 
 # Challenges  
@@ -333,3 +332,4 @@ I learned a lot about pair programming through this exercise. We had a lot of fu
 
 - Adapting the app to be mobile friendly.
 - I would like to play around with a React animation library and try and incorporate some animation in to really make the information stand out like on WizardingWorld or Pottermore. 
+- Build a more complex quiz for the sorting hat functionality. 
