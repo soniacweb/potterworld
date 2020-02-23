@@ -30,7 +30,7 @@ class HouseSort extends React.Component {
               <div className="image is-2by1">
 
                
-                <p className="subtitle has-text-white has-text-centered title is-3" >Congratulations! The magical Sorting Hat has determined you are in house {this.state.randomsort}!</p>
+                <p className="subtitle has-text-white has-text-centered title is-3" >Congratulations! The magical Sorting Hat has determined you are in {this.state.randomsort} house!</p>
                 <p className="subtitle has-text-centered "></p>
                 
               
