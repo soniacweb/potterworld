@@ -31,7 +31,7 @@ class Quiz extends React.Component {
 
   render() {
     console.log(this.state.house)
-    console.log(process.env.API_Key)
+    // console.log(process.env.API_Key)
     // console.log(config)
     return (
       <section className="hero is-fullheight">
