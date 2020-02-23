@@ -44,7 +44,7 @@ class HouseHistoryCard extends React.Component {
                 <article className="tile is-child notification">
                   {/* capitalise the first letter */}
               
-                  <p id="housetitle" className="title">House {this.state.househistory[0].name}</p>
+                  <p id="housetitle" className="title">{this.state.househistory[0].name} House</p>
                   {/* if statement to return no known aliass */}
                   <p className="title">founder: {this.state.househistory[0].founder}</p>
 
@@ -119,7 +119,7 @@ class HouseHistoryCard extends React.Component {
                       {/* value is an array, if you want them to have comma in between each other, will have to map it and add comma at the end */}
                       <div className="subtitle"> {this.state.househistory[0].founder} founded this great house. It is said, {this.state.househistory[0].founder} valued {this.state.househistory[0].values.map((value, i) => {
                         return <p className="valueTag" key={i}>{value},</p> 
-                      })} and wanted those who shared those values to enter house {this.state.househistory[0].name}.</div>
+                      })} and wanted those who shared those values to enter {this.state.househistory[0].name} house.</div>
                       {/* members is an array as well */}
                        
                       <article className="tile is-child notification">
