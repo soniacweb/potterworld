@@ -8,7 +8,7 @@
 
 # Intro 
 
-<a href="http://bit.ly/potterlyv2">Potterly</a> is fantasy media app, delving into the fictional universe centered around the Harry Potter novel series by writer, J. K. Rowling. This project is for personal use, and no copyright infringement is intended. We used an unnofficial Harry Potter API - https://www.potterapi.com/.
+<a href="http://bit.ly/potterlyv3">Potterly</a> is fantasy media app, delving into the fictional universe centered around the Harry Potter novel series by writer, J. K. Rowling. This project is for personal use, and no copyright infringement is intended. We used an unnofficial Harry Potter API - https://www.potterapi.com/.
 
 
 # Getting Started
