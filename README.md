@@ -51,11 +51,11 @@ Our app comprises of 5 main pages: Welcome, `House Sorting, Characters, Spells, 
 
 Within `House Sorting`, there are 4 options the user can select: `House Sorting`, `Characters`, `Spells`, and `Hogwarts- A History`.
 
-The `Characters` page: When clicked, the user is taken to an index page listing all of the characers known in the fantasy world JK Rowling's created for the Harry Potter franchise. If any of the character cards are clicked on, the user is directed to a `single character` index page, listing further information about the character. 
+The `Characters` page: When clicked, the user is taken to an index page (mapping through unique character `ids` for each) listing all of the characers known in the fantasy world JK Rowling's created for the Harry Potter franchise. If any of the character cards are clicked on, the user is directed to a `single character` index page, listing further information about the character. 
 
 `House Sorting`: The button labelled `House Sorting` is a main feature we really wanted to incorporate. When clicked the user is directed to a 'sorting hat' page where it displays a randomly chosen house the user is allocated into. We fetch the random allocation from the response we recieve back each time from the API.
 
-The general design was fun and interesting to create. We decided to use Bulma fullheight hero images to bring our mockups to life, with the general theme for users to navigate using buttons at the bottom. We also added a responsive navbar fopr mobile.
+The general design was fun and interesting to create. We decided to use Bulma fullheight hero images to bring our mockups to life, with the general theme for users to navigate using buttons at the bottom. We also added a responsive navbar for mobile.
 
 ### Welcome Page
 
@@ -204,7 +204,7 @@ Characters Page:
 
 <img src="https://i.imgur.com/FdMSGui.png" style="400px margin: 0 auto;" />
 
-To add on a seperate note, for the `HOUSE HISTORY` and `SPELLS` page, the JSON API response we were receiving back was an object in an array- something I hadn't personally experienced. We were required to add `[0]` to the dot notation to access the data from the object and render is successfully. The below is an excerpt is an example of this:
+To add on a seperate note, for the `HOUSE HISTORY` and `SPELLS` page, the JSON API response we were receiving back was an object in an array- something I hadn't personally experienced. We were required to add `[0]` to the dot notation to access the first `house` data from the object and map through, to render it successfully. The below is an excerpt is an example of this:
 
 
 ```
@@ -240,9 +240,9 @@ View of the character page:
 
 ## Filtering and Search Features: Building a basic React.js form with no additional libraries
 
-For the Spells page, we have a filter form consisting of types of spells the user can read through and select. We also have a basic search funtionality too.
+For the `Spells` page, we have a filter form consisting of types of spells the user can read through and select. We also have a basic search funtionality too.
 
-We used a `spells` from input box, which includes an input of type text, and a `spells` select list, which will display a unique list of spells based on the API's listing.
+We used a `spells` form input box, which includes an input of type text, and a `spells` select list, which will display a unique list of spells based on the API's listing.
 
 The code below is a short excerpt of this: 
 
