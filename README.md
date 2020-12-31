@@ -10,6 +10,7 @@
 
 <a href="https://soniacweb.github.io/SEI-Project-02-Potterly/">Potterly</a> is fantasy media app, delving into the fictional universe centered around the Harry Potter novel series by writer, J. K. Rowling. This project is for personal use, and no copyright infringement is intended. We used an unnofficial Harry Potter API - https://www.potterapi.com/.
 
+(Please be aware API as of Dec 2020 is under construction, therefore project will need ot be updated upon updated end points)
 
 # Getting Started
 Clone or download the repo
